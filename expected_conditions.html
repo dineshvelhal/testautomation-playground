@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <<!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -44,68 +44,20 @@
 
     <div class="container align-items-center text-center">
         
-        <!-- Wait for element to be visible -->
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for element to be visible</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-1">
-                <p>1</p>
-            </div>
-            <div class="col-sm-3">
-                <p>Click the <strong>Trigger</strong> and an invisible button will be visible!</p>
-                <button type="button" class="btn btn-primary" id="visibility_trigger">Trigger</button>
-                <p></p>
-            </div>
-            <div class="col-sm-8">
-                <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
-                <button type="button" class="btn btn-lg btn-danger" id="visibility_target" style="display: none"
-                    data-toggle="popover" title="Can you see me?"
-                    data-content="I just removed my invisibility cloak!!">Click Me</button>
-            </div>
-        </div>
-
-        <br><br>
-
-        <!--Wait for element to be enabled-->
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for element to be enabled</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-1">
-                <p>2</p>
-            </div>
-            <div class="col-sm-3">
-                <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become active.</p>
-                <button type="button" class="btn btn-primary" id="enabled_trigger">Trigger</button>
-                <p></p>
-           </div>
-            <div class="col-sm-8">
-                <p>This button will be active and green after the <strong>Trigger</strong> button is clicked.
-                </p>
-                <button type="button" class="btn btn-lg btn-danger" id="enabled_target" data-toggle="popover"
-                    title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
-                    Button</button>
-            </div>
-        </div>
-
-        <br><br>
-
         <!-- Wait for alert to be present -->
         <div class="row  border border-secondary  align-items-center text-center">
             <div class="col-sm-12 bg-secondary text-light">
                 <h4>Wait for alert to be present</h4>
             </div>
         </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-1">
-                <p>3</p>
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 text-left">
+                <pre>Expected Conditions: 
+                        alertIsPresent()</pre>
             </div>
-            <div class="col-sm-3">
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-4">
                 <p>Test the JavaScript <strong>alert</strong> and <strong>prompt</strong></p>
                 <button type="button" class="btn btn-primary" id="alert_trigger">Show Alert</button>
                 <button type="button" class="btn btn-primary" id="prompt_trigger">Show Prompt</button>
@@ -118,6 +70,129 @@
             </div>
         </div>
 
+        <br><br>
+
+        <!-- Wait for element to be visible -->
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for element to be visible</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 text-left">
+                <pre>Expected Conditions: 
+                        visibilityOf(WebElement element)
+                        visibilityOfElementLocated(By locator)
+                        elementToBeClickable(WebElement element)</pre>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-4">
+                <p>Click the <strong>Trigger</strong> and an invisible button will be visible!</p>
+                <button type="button" class="btn btn-primary" id="visibility_trigger">Trigger</button>
+                <p></p>
+            </div>
+            <div class="col-sm-8">
+                <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
+                <button type="button" class="btn btn-lg btn-danger" id="visibility_target" style="display: none"
+                    data-toggle="popover" title="Can you see me?"
+                    data-content="I just removed my invisibility cloak!!">Click Me</button>
+            </div>
+        </div>
+        
+        <br><br>
+
+        <!-- Wait for element to be invisible -->
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for element to be Invisible</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 text-left">
+                <pre>Expected Conditions: 
+                        invisibilityOf(WebElement element)
+                        invisibilityOfElementLocated(By locator)
+                        invisibilityOfElementWithText(By locator, java.lang.String text)</pre>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-4">
+                <p>Click the <strong>Trigger</strong> and the spinner will disappear!</p>
+                <button type="button" class="btn btn-primary" id="invisibility_trigger">Trigger</button>
+                <p></p>
+            </div>
+            <div class="col-sm-8">
+                <p>This spinner will disappear after <strong>Trigger</strong> button is clicked.</p>
+                <div class="spinner-border text-primary" role="status" id="invisibility_target">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p style="display: none" id="spinner_gone">Thank God that spinner is gone!</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!--Wait for element to be enabled-->
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for element to be enabled / Wait for an attribute to contain certain text</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 text-left">
+                <pre>Expected Conditions: 
+                        attributeContains(By locator, java.lang.String attribute, java.lang.String value)
+                        attributeContains(WebElement element, java.lang.String attribute, java.lang.String value)
+                        attributeToBe(By locator, java.lang.String attribute, java.lang.String value)
+                        attributeToBe(WebElement element, java.lang.String attribute, java.lang.String value)
+                        elementToBeClickable(By locator)
+                        elementToBeClickable(WebElement element)</pre>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-4">
+                <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become active.</p>
+                <button type="button" class="btn btn-primary" id="enabled_trigger">Trigger</button>
+                <p></p>
+           </div>
+            <div class="col-sm-8">
+                <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be active <br>and the <em>class</em> attribute will be <em>"btn btn-lg btn-success"</em>.
+                </p>
+                <button type="button" class="btn btn-lg btn-danger" id="enabled_target" data-toggle="popover"
+                    title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
+                    Button</button><p></p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- Wait for Page Title to change -->
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for Page Title to change</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 text-left">
+                <pre>Expected Conditions: 
+                        titleContains(java.lang.String title)
+                        titleIs(java.lang.String title)</pre>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-4">
+                <p>Click the <strong>Trigger</strong> and the Page Title will change to "My New Title!"</p>
+                <button type="button" class="btn btn-primary" id="page_title_trigger">Trigger</button>
+                <p></p>
+           </div>
+            <div class="col-sm-8">
+                
+            </div>
+        </div>
+
+        <br><br>
+        <p></p>
     </div>
 
  
@@ -174,6 +249,19 @@
  
                 finishWaitState($(this), origTarget);
             });
+
+            // wait for element invisible
+            $("#invisibility_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+ 
+                $("#invisibility_target").hide();
+                $("#spinner_gone").show();
+ 
+                finishWaitState($(this), origTarget);
+            });
  
             // wait for element enabled
             $("#enabled_trigger").click(async function () {
@@ -195,7 +283,7 @@
                 $("#confirm_cancelled").hide();
                 $("#confirm_ok").hide();
                 $("#alert_handled").hide();
-                
+
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
@@ -207,7 +295,7 @@
                 finishWaitState($(this), origTarget);
             });
 
-            // wait for prompt
+            // wait for confirm
             $("#prompt_trigger").click(async function () {
                 $("#confirm_cancelled").hide();
                 $("#confirm_ok").hide();
@@ -225,6 +313,18 @@
                     $("#confirm_cancelled").show();
                 }
                 
+                finishWaitState($(this), origTarget);
+            });
+
+            // Wait for Page Title to change
+            $("#page_title_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+ 
+                $(document).attr("title", "My New Title!");
+ 
                 finishWaitState($(this), origTarget);
             });
  
