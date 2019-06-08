@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Expected Conditions  Playground!</title>
+</head>
+
+ 
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">Expected Conditions Playground</a>
+        <form class="form-inline">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Min. Wait</span>
+                </div>
+                <input type="number" class="form-control" placeholder="Min. Wait" id="min_wait" value="3">
+                <div class="input-group-append">
+                    <span class="input-group-text">seconds</span>
+                </div>
+            </div>
+            <pre>  </pre>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Max. Wait</span>
+                </div>
+                <input type="number" class="form-control" placeholder="Max. Wait" id="max_wait" value="8">
+                <div class="input-group-append">
+                    <span class="input-group-text">seconds</span>
+                </div>
+            </div>
+        </form>
+    </nav>
+
+    <br><br><br><br>
+
+    <div class="container align-items-center text-center">
+        
+        <!-- Wait for element to be visible -->
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for element to be visible</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-1">
+                <p>1</p>
+            </div>
+            <div class="col-sm-3">
+                <p>Click the <strong>Trigger</strong> and an invisible button will be visible!</p>
+                <button type="button" class="btn btn-primary" id="visibility_trigger">Trigger</button>
+                <p></p>
+            </div>
+            <div class="col-sm-8">
+                <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
+                <button type="button" class="btn btn-lg btn-danger" id="visibility_target" style="display: none"
+                    data-toggle="popover" title="Can you see me?"
+                    data-content="I just removed my invisibility cloak!!">Click Me</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!--Wait for element to be enabled-->
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for element to be enabled</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-1">
+                <p>2</p>
+            </div>
+            <div class="col-sm-3">
+                <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become active.</p>
+                <button type="button" class="btn btn-primary" id="enabled_trigger">Trigger</button>
+                <p></p>
+           </div>
+            <div class="col-sm-8">
+                <p>This button will be active and green after the <strong>Trigger</strong> button is clicked.
+                </p>
+                <button type="button" class="btn btn-lg btn-danger" id="enabled_target" data-toggle="popover"
+                    title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
+                    Button</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- Wait for alert to be present -->
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for alert to be present</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-1">
+                <p>3</p>
+            </div>
+            <div class="col-sm-3">
+                <p>Test the JavaScript <strong>alert</strong> and <strong>prompt</strong></p>
+                <button type="button" class="btn btn-primary" id="alert_trigger">Show Alert</button>
+                <button type="button" class="btn btn-primary" id="prompt_trigger">Show Prompt</button>
+                <p></p>
+            </div>
+            <div class="col-sm-8">
+                <h4 style="display: none" id="confirm_ok">Confirm response: <span class="badge badge-success">OK</span></h4>
+                <h4 style="display: none" id="confirm_cancelled">Confirm response: <span class="badge badge-danger">Cancelled</span></h4>
+                <h4 style="display: none" id="alert_handled"><span class="badge badge-success">Alert handled</span></h4>
+            </div>
+        </div>
+
+    </div>
+
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        // sleep for "ms" milliseconds
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms * 1000));
+        };
+ 
+        // generate random number between the min and max values
+        function randomSeconds() {
+            var min = parseInt($("#min_wait").val());
+            var max = parseInt($("#max_wait").val());
+ 
+            return (Math.floor(Math.random() * (max - min)) + min);
+        };
+ 
+        // Put trigger button in waiting state
+        function setWaitState(trigger, ms) {
+            var origTarget = trigger.html();
+ 
+            trigger
+                .html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span> Waiting (' + ms + 's)')
+                .attr("disabled", true);
+ 
+            return origTarget;
+        }
+ 
+        // finish the wait state of the trigger button
+        function finishWaitState(trigger, origHTML) {
+            trigger.html(origHTML).attr("disabled", false);
+        }
+ 
+        // All functions
+        $(document).ready(function () {
+            // Initialize the popover
+            $('[data-toggle="popover"]').popover();
+ 
+            // wait for element visible
+            $("#visibility_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+ 
+                $("#visibility_target").show();
+ 
+                finishWaitState($(this), origTarget);
+            });
+ 
+            // wait for element enabled
+            $("#enabled_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                $("#enabled_target")
+                    .attr("class", "btn btn-lg btn-success")
+                    .html("Enabled Button")
+                    .attr("disabled", false);
+ 
+                finishWaitState($(this), origTarget);
+            });
+
+            // wait for alert
+            $("#alert_trigger").click(async function () {
+                $("#confirm_cancelled").hide();
+                $("#confirm_ok").hide();
+                $("#alert_handled").hide();
+                
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                a = alert("I am alerting you!");
+                $("#alert_handled").show();
+ 
+                finishWaitState($(this), origTarget);
+            });
+
+            // wait for prompt
+            $("#prompt_trigger").click(async function () {
+                $("#confirm_cancelled").hide();
+                $("#confirm_ok").hide();
+                $("#alert_handled").hide();
+
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                res = confirm("Choose wisely...\nIt's your life!");
+                if(res){
+                    $("#confirm_ok").show();
+                }else{
+                    $("#confirm_cancelled").show();
+                }
+                
+                finishWaitState($(this), origTarget);
+            });
+ 
+        });
+
+        /*async function makeVisible() {
+            var x = document.getElementById("element_1");
+            await sleep(5000)
+            x.style.display = "inline-block";
+        }*/
+ 
+        /*async function makeEnabled() {
+            var x = document.getElementById("element_2");
+            await sleep(5000)
+            x.disabled = false;
+            x.textContent = "Enabled Button";
+            x.className = "btn btn-lg btn-success";
+        }*/
+    </script>
+</body>
+</html>
