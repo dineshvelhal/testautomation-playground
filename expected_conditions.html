@@ -94,7 +94,7 @@
             </div>
             <div class="col-sm-8">
                 <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
-                <button type="button" class="btn btn-lg btn-danger" id="visibility_target" style="display: none"
+                <button type="button" class="btn btn-danger" id="visibility_target" style="display: none"
                     data-toggle="popover" title="Can you see me?"
                     data-content="I just removed my invisibility cloak!!">Click Me</button>
             </div>
@@ -157,9 +157,9 @@
                 <p></p>
            </div>
             <div class="col-sm-8">
-                <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be active <br>and the <em>class</em> attribute will be <em>"btn btn-lg btn-success"</em>.
+                <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be active <br>and the <em>class</em> attribute will be <em>"btn btn-success"</em>.
                 </p>
-                <button type="button" class="btn btn-lg btn-danger" id="enabled_target" data-toggle="popover"
+                <button type="button" class="btn btn-danger" id="enabled_target" data-toggle="popover"
                     title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
                     Button</button><p></p>
             </div>
@@ -188,6 +188,43 @@
            </div>
             <div class="col-sm-8">
                 
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- Wait for text/value to have specific values -->
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for text/value to have specific values</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 text-left">
+                <pre>Expected Conditions: 
+                        textMatches(By locator, java.util.regex.Pattern pattern)
+                        textToBe(By locator, java.lang.String value)
+                        textToBePresentInElement(WebElement element, java.lang.String text)
+                        textToBePresentInElementLocated(By locator, java.lang.String text)
+                        textToBePresentInElementValue(By locator, java.lang.String text)
+                        textToBePresentInElementValue(WebElement element, java.lang.String text)</pre>
+
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-4">
+                <p>Click the <strong>Trigger</strong> to enter text in the textbox and change the button caption"</p>
+                <button type="button" class="btn btn-primary" id="text_value_trigger">Trigger</button>
+                <p></p>
+            </div>
+            <div class="col-sm-8 align-items-center">
+                <form class="form-inline">
+                    <input type="text" class="form-control" placeholder="Creator of C" id="wait_for_value">
+                    <button class="btn btn-success" type="button" id="wait_for_text">
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        <span class="sr-only">Loading...</span>
+                    </button>
+                </form>
             </div>
         </div>
 
@@ -271,7 +308,7 @@
                 await sleep(ms);
 
                 $("#enabled_target")
-                    .attr("class", "btn btn-lg btn-success")
+                    .attr("class", "btn btn-success")
                     .html("Enabled Button")
                     .attr("disabled", false);
  
@@ -327,22 +364,21 @@
  
                 finishWaitState($(this), origTarget);
             });
+
+            // Wait for text/value to have specific values
+            $("#text_value_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+ 
+                $("#wait_for_value").val("Dennis Ritchie");
+                $("#wait_for_text").html("Submit");
+
+                finishWaitState($(this), origTarget);
+            });
  
         });
-
-        /*async function makeVisible() {
-            var x = document.getElementById("element_1");
-            await sleep(5000)
-            x.style.display = "inline-block";
-        }*/
- 
-        /*async function makeEnabled() {
-            var x = document.getElementById("element_2");
-            await sleep(5000)
-            x.disabled = false;
-            x.textContent = "Enabled Button";
-            x.className = "btn btn-lg btn-success";
-        }*/
     </script>
 </body>
 </html>
