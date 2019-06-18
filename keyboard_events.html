@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Keyboard Events Playground!</title>
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">Keyboard Events Playground!</a>
+    </nav>
+
+    <br><br><br><br>
+
+    <div class="container align-items-center text-center">
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Keyboard Interactions</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 text-left">
+                <pre>
+                    Type normal keys or any special key combinations inside the TextArea below.</pre>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="comment">Type here:</label>
+                    <textarea class="form-control" rows="5" id="area"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-4">
+                <h4>Special key Status:</h4>
+            </div>
+            <div class="col-sm-1">
+                <h3><span class="badge badge-pill badge-success" id="ctrl" style="display: none">Ctrl</span></h3>
+            </div>
+            <div class="col-sm-1">
+                <h3><span class="badge badge-pill badge-success" id="alt" style="display: none">Alt</span></h3>
+            </div>
+            <div class="col-sm-1">
+                <h3><span class="badge badge-pill badge-success" id="shift" style="display: none">Shift</span></h3>
+            </div>
+            <div class="col-sm-1">
+                <h3><span class="badge badge-pill badge-success" id="meta" style="display: none">Meta</span></h3>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        // All functions
+        $(document).ready(function() {
+            // Initialize the popover
+            $('[data-toggle="popover"]').popover();
+
+            var area = document.getElementById("area");
+            area.addEventListener("keydown", handleKeyPress);
+        });
+
+        function handleKeyPress(zEvent) {
+            if (zEvent.ctrlKey)
+                $("#ctrl").show();
+            else
+                $("#ctrl").hide();
+
+            if (zEvent.altKey)
+                $("#alt").show();
+            else
+                $("#alt").hide();
+
+            if (zEvent.shiftKey)
+                $("#shift").show();
+            else
+                $("#shift").hide();
+
+            if (zEvent.metaKey)
+                $("#meta").show();
+            else
+                $("#meta").hide();
+        }
+    </script>
+</body>
+
+</html>

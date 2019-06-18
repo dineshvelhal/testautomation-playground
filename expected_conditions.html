@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,10 +9,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Expected Conditions  Playground!</title>
+    <title>Expected Conditions Playground!</title>
 </head>
 
- 
+
 
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
@@ -43,7 +44,7 @@
     <br><br><br><br>
 
     <div class="container align-items-center text-center">
-        
+
         <!-- Wait for alert to be present -->
         <div class="row  border border-secondary  align-items-center text-center">
             <div class="col-sm-12 bg-secondary text-light">
@@ -94,12 +95,10 @@
             </div>
             <div class="col-sm-8">
                 <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
-                <button type="button" class="btn btn-danger" id="visibility_target" style="display: none"
-                    data-toggle="popover" title="Can you see me?"
-                    data-content="I just removed my invisibility cloak!!">Click Me</button>
+                <button type="button" class="btn btn-danger" id="visibility_target" style="display: none" data-toggle="popover" title="Can you see me?" data-content="I just removed my invisibility cloak!!">Click Me</button>
             </div>
         </div>
-        
+
         <br><br>
 
         <!-- Wait for element to be invisible -->
@@ -155,13 +154,13 @@
                 <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become active.</p>
                 <button type="button" class="btn btn-primary" id="enabled_trigger">Trigger</button>
                 <p></p>
-           </div>
+            </div>
             <div class="col-sm-8">
                 <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be active <br>and the <em>class</em> attribute will be <em>"btn btn-success"</em>.
                 </p>
-                <button type="button" class="btn btn-danger" id="enabled_target" data-toggle="popover"
-                    title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
-                    Button</button><p></p>
+                <button type="button" class="btn btn-danger" id="enabled_target" data-toggle="popover" title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
+                    Button</button>
+                <p></p>
             </div>
         </div>
 
@@ -185,9 +184,9 @@
                 <p>Click the <strong>Trigger</strong> and the Page Title will change to "My New Title!"</p>
                 <button type="button" class="btn btn-primary" id="page_title_trigger">Trigger</button>
                 <p></p>
-           </div>
+            </div>
             <div class="col-sm-8">
-                
+
             </div>
         </div>
 
@@ -232,7 +231,7 @@
         <p></p>
     </div>
 
- 
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -245,63 +244,63 @@
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms * 1000));
         };
- 
+
         // generate random number between the min and max values
         function randomSeconds() {
             var min = parseInt($("#min_wait").val());
             var max = parseInt($("#max_wait").val());
- 
+
             return (Math.floor(Math.random() * (max - min)) + min);
         };
- 
+
         // Put trigger button in waiting state
         function setWaitState(trigger, ms) {
             var origTarget = trigger.html();
- 
+
             trigger
                 .html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span> Waiting (' + ms + 's)')
                 .attr("disabled", true);
- 
+
             return origTarget;
         }
- 
+
         // finish the wait state of the trigger button
         function finishWaitState(trigger, origHTML) {
             trigger.html(origHTML).attr("disabled", false);
         }
- 
+
         // All functions
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Initialize the popover
             $('[data-toggle="popover"]').popover();
- 
+
             // wait for element visible
-            $("#visibility_trigger").click(async function () {
+            $("#visibility_trigger").click(async function() {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
                 await sleep(ms);
- 
+
                 $("#visibility_target").show();
- 
+
                 finishWaitState($(this), origTarget);
             });
 
             // wait for element invisible
-            $("#invisibility_trigger").click(async function () {
+            $("#invisibility_trigger").click(async function() {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
                 await sleep(ms);
- 
+
                 $("#invisibility_target").hide();
                 $("#spinner_gone").show();
- 
+
                 finishWaitState($(this), origTarget);
             });
- 
+
             // wait for element enabled
-            $("#enabled_trigger").click(async function () {
+            $("#enabled_trigger").click(async function() {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
@@ -311,12 +310,12 @@
                     .attr("class", "btn btn-success")
                     .html("Enabled Button")
                     .attr("disabled", false);
- 
+
                 finishWaitState($(this), origTarget);
             });
 
             // wait for alert
-            $("#alert_trigger").click(async function () {
+            $("#alert_trigger").click(async function() {
                 $("#confirm_cancelled").hide();
                 $("#confirm_ok").hide();
                 $("#alert_handled").hide();
@@ -328,12 +327,12 @@
 
                 a = alert("I am alerting you!");
                 $("#alert_handled").show();
- 
+
                 finishWaitState($(this), origTarget);
             });
 
             // wait for confirm
-            $("#prompt_trigger").click(async function () {
+            $("#prompt_trigger").click(async function() {
                 $("#confirm_cancelled").hide();
                 $("#confirm_ok").hide();
                 $("#alert_handled").hide();
@@ -344,41 +343,42 @@
                 await sleep(ms);
 
                 res = confirm("Choose wisely...\nIt's your life!");
-                if(res){
+                if (res) {
                     $("#confirm_ok").show();
-                }else{
+                } else {
                     $("#confirm_cancelled").show();
                 }
-                
+
                 finishWaitState($(this), origTarget);
             });
 
             // Wait for Page Title to change
-            $("#page_title_trigger").click(async function () {
+            $("#page_title_trigger").click(async function() {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
                 await sleep(ms);
- 
+
                 $(document).attr("title", "My New Title!");
- 
+
                 finishWaitState($(this), origTarget);
             });
 
             // Wait for text/value to have specific values
-            $("#text_value_trigger").click(async function () {
+            $("#text_value_trigger").click(async function() {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
                 await sleep(ms);
- 
+
                 $("#wait_for_value").val("Dennis Ritchie");
                 $("#wait_for_text").html("Submit");
 
                 finishWaitState($(this), origTarget);
             });
- 
+
         });
     </script>
 </body>
+
 </html>
