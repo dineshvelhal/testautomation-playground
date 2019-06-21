@@ -228,10 +228,37 @@
         </div>
 
         <br><br>
-        <p></p>
+
+        <!-- Wait for frame to be available and then switch to it -->
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Wait for frame to be available and then switch to it</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary  align-items-center text-center">
+                <div class="col-sm-12 text-left">
+                    <pre>Expected Conditions: 
+                    frameToBeAvailableAndSwitchToIt(By locator)
+                    frameToBeAvailableAndSwitchToIt(int frameLocator)
+                    frameToBeAvailableAndSwitchToIt(java.lang.String frameLocator)
+                    frameToBeAvailableAndSwitchToIt(WebElement frameLocator)</pre>
+                </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-4">
+                <p>Click the <strong>Trigger</strong> and a frame will appear after a few seconds</p>
+                <button type="button" class="btn btn-primary" id="wait_for_frame">Trigger</button>
+                <p></p>
+            </div>
+            <div class="col-sm-8 align-items-center">
+                <p></p><iframe src="inner.html" style="display: none" id="frame" name="frm"></iframe>
+            </div>
+        </div>
+
+        <br><br>
     </div>
 
-
+    <br><br><br><br>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -376,7 +403,18 @@
 
                 finishWaitState($(this), origTarget);
             });
+            
+            // wait for element visible
+            $("#wait_for_frame").click(async function() {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
 
+                $("#frame").show();
+
+                finishWaitState($(this), origTarget);
+            });
         });
     </script>
 </body>
