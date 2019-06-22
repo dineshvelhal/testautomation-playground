@@ -42,23 +42,20 @@
             </div>
         </div>
         <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-4">
-                <h4>Special key Status:</h4>
+            <div class="col-sm-3"><strong style="margin-right: 10px">Modifier key Status: </strong></div>
+            <div class="col-sm-4 align-items-left text-left">
+                <span class="badge badge-success" id="meta" style="display: none ">Meta</span>
+                <span class="badge badge badge-success" id="ctrl" style="display: none ">Ctrl</span>
+                <span class="badge badge-success" id="alt" style="display: none ">Alt</span>
+                <span class="badge badge-success" id="shift" style="display: none ">Shift</span>
             </div>
-            <div class="col-sm-1">
-                <h3>
-                    <span class="badge badge-pill badge-success" id="ctrl"  style="display: none ">Ctrl</span></h3>
+            <div class="col-sm-2 border-left border-dark text-right">
+                <span><strong> Special Keys: </strong></span>
             </div>
-            <div class="col-sm-1 ">
-                <h3><span class="badge badge-pill badge-success" id="alt" style="display: none ">Alt</span></h3>
+            <div class="col-sm-3 text-left">
+                Key: <span class="badge badge-danger" id="key" style="margin-right: 20px"></span>
+                Code: <span class="badge badge-danger" id="code"></span>
             </div>
-            <div class="col-sm-1 ">
-                <h3><span class="badge badge-pill badge-success" id="shift" style="display: none ">Shift</span></h3>
-            </div>
-            <div class="col-sm-1 ">
-                <h3><span class="badge badge-pill badge-success" id="meta" style="display: none ">Meta</span></h3>
-            </div>
-            <div class="col-sm-4 "></div>
         </div>
     </div>
 
@@ -82,9 +79,8 @@
         });
 
         function handleKeyPress(zEvent) {
-            if (zEvent.ctrlKey){
+            if (zEvent.ctrlKey)
                 $("#ctrl").show();
-            }
             else
                 $("#ctrl").hide();
 
@@ -102,6 +98,12 @@
                 $("#meta").show();
             else
                 $("#meta").hide();
+
+            $("#key").text(zEvent.key);
+            $("#code").text(zEvent.code);
+            //console.log(zEvent.key);
+            //console.log(zEvent.code);
+            //console.log(zEvent.location);
         }
     </script>
 </body>
