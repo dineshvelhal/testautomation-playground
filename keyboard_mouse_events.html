@@ -57,6 +57,29 @@
                 Code: <span class="badge badge-danger" id="code"></span>
             </div>
         </div>
+
+        <br><br>
+
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 bg-secondary text-light">
+                <h4>Mouse Interactions</h4>
+            </div>
+        </div>
+        <div class="row  border border-secondary  align-items-center text-center">
+            <div class="col-sm-12 text-left">
+                Perform mouse operations like Click, Double-Click, Right-Click (Context-Click) in the blue box below
+            </div>
+        </div>
+        <div class="row  border border-secondary align-items-center text-center">
+            <div class="col-sm-6 p-3">
+                <div class="bg-primary text-light" id="click_area" style="height: 100px">Perform mouse operations here</div>
+            </div>
+            <div class="col-sm-6">
+                <p><label class="font-weight-bold" id="click_type"></label></p>
+                <p><label class="font-weight-bold" id="click_x"></label></p>
+                <label class="font-weight-bold" id="click_y"></label>
+            </div>
+        </div>
     </div>
 
 
@@ -76,6 +99,27 @@
             var area = document.getElementById("area");
             console.log(area);
             area.addEventListener("keydown", handleKeyPress);
+
+            $("#click_area").dblclick(function(e){
+                $("#click_type").text("Double-Click");
+
+                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
+                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
+            });
+
+            $("#click_area").click(function(e){
+                $("#click_type").text("Click");
+
+                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
+                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
+            });
+
+            $("#click_area").contextmenu(function(e){
+                $("#click_type").text("Right-Click");
+
+                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
+                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
+            });
         });
 
         function handleKeyPress(zEvent) {
