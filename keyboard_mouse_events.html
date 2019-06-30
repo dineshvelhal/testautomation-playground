@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
     <title>Keyboard & Mouse Events Playground!</title>
 </head>
 
@@ -22,68 +24,72 @@
 
     <nav class="navbar fixed-bottom navbar-dark bg-dark">
         <a class="navbar-brand" href="#"><small>&copy; 2019 Dinesh Velhal </small></a>
+        <form class="form-inline my-2 my-lg-0">
+            <small><a class="btn btn-success" href="attribution.html" role="button"><i class="fa fa-heart"></i> Thanks To</a>
+            <a class="btn btn-light" href="index.html" role="button"><i class="fa fa-home"></i> Home</a></small>
+        </form>
     </nav>
 
     <br><br><br><br>
 
     <div class="container align-items-center text-center">
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Keyboard Interactions</h4>
+        <br>
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Keyboard Interactions</h2>
+                <div class="col-sm-12 text-left">
+                    Type normal keys or any special key combinations (that include <code>Ctrl, Alt, Shift, Meta</code> keys) inside the TextArea below.
+                </div>
             </div>
-        </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 text-left">
-                Type normal keys or any special key combinations (that include <code>Ctrl, Alt, Shift, Meta</code> keys) inside the TextArea below.
-            </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-12">
+            <div class="card-body">
                 <div class="form-group">
-                    <label for="comment">Type here:</label>
-                    <textarea class="form-control" rows="5" id="area"></textarea>
+                    <textarea class="form-control shadow-sm" rows="5" id="area"></textarea>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-3"><strong style="margin-right: 10px">Modifier key Status: </strong></div>
+                    <div class="col-sm-3">
+                        <span class="badge badge-success" id="meta" style="display: none ">Meta</span>
+                        <span class="badge badge badge-success" id="ctrl" style="display: none ">Ctrl</span>
+                        <span class="badge badge-success" id="alt" style="display: none ">Alt</span>
+                        <span class="badge badge-success" id="shift" style="display: none ">Shift</span>
+                    </div>
+                    <div class="col-sm-2 border-left border-dark">
+                        <span><strong> Special Keys: </strong></span>
+                    </div>
+                    <div class="col-sm-4">
+                        Key: <span class="badge badge-danger" id="key" style="margin-right: 20px"></span>
+                        Code: <span class="badge badge-danger" id="code"></span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-3"><strong style="margin-right: 10px">Modifier key Status: </strong></div>
-            <div class="col-sm-4 align-items-left text-left">
-                <span class="badge badge-success" id="meta" style="display: none ">Meta</span>
-                <span class="badge badge badge-success" id="ctrl" style="display: none ">Ctrl</span>
-                <span class="badge badge-success" id="alt" style="display: none ">Alt</span>
-                <span class="badge badge-success" id="shift" style="display: none ">Shift</span>
+
+        <br>
+
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Mouse Interactions</h2>
+                Perform mouse operations like <code>Click, Double-Click, Right-Click (Context-Click)</code> in the blue box below
             </div>
-            <div class="col-sm-2 border-left border-dark text-right">
-                <span><strong> Special Keys: </strong></span>
-            </div>
-            <div class="col-sm-3 text-left">
-                Key: <span class="badge badge-danger" id="key" style="margin-right: 20px"></span>
-                Code: <span class="badge badge-danger" id="code"></span>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-6 p-3">
+                        <div class="bg-primary text-light shadow-sm" id="click_area" style="height: 100px">Perform mouse operations here</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="font-weight-bold" id="click_type" style="margin-right: 20px"></label>
+                        <label class="font-weight-bold" id="click_x" style="margin-right: 20px"></label>
+                        <label class="font-weight-bold" id="click_y"></label>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <br><br>
+        <br>
 
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Mouse Interactions</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 text-left">
-                Perform mouse operations like Click, Double-Click, Right-Click (Context-Click) in the blue box below
-            </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-6 p-3">
-                <div class="bg-primary text-light" id="click_area" style="height: 100px">Perform mouse operations here</div>
-            </div>
-            <div class="col-sm-6">
-                <label class="font-weight-bold" id="click_type" style="margin-right: 20px"></label>
-                <label class="font-weight-bold" id="click_x" style="margin-right: 20px"></label>
-                <label class="font-weight-bold" id="click_y"></label>
-            </div>
-        </div>
+
     </div>
 
     <br><br><br><br>

@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Expected Conditions Playground!</title>
 </head>
@@ -17,249 +19,263 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand/logo -->
-        <a class="navbar-brand" href="#">Expected Conditions Playground</a>
-        <form class="form-inline">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Min. Wait</span>
-                </div>
-                <input type="number" class="form-control" placeholder="Min. Wait" id="min_wait" value="3">
-                <div class="input-group-append">
-                    <span class="input-group-text">seconds</span>
-                </div>
-            </div>
-            <pre>  </pre>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Max. Wait</span>
-                </div>
-                <input type="number" class="form-control" placeholder="Max. Wait" id="max_wait" value="8">
-                <div class="input-group-append">
-                    <span class="input-group-text">seconds</span>
-                </div>
-            </div>
-        </form>
+        <a class="navbar-brand abs" href="#">Expected Conditions Playground</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form class="form-inline">
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Min. Wait</span>
+                        </div>
+                        <input type="number" class="form-control" placeholder="Min. Wait" id="min_wait" value="2">
+                        <div class="input-group-append">
+                            <span class="input-group-text">sec.</span>
+                        </div>
+                    </div>
+                    <pre>  </pre>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Max. Wait</span>
+                        </div>
+                        <input type="number" class="form-control" placeholder="Max. Wait" id="max_wait" value="5">
+                        <div class="input-group-append">
+                            <span class="input-group-text">sec.</span>
+                        </div>
+                    </div>
+                </form>
+            </li>
+        </ul>
     </nav>
 
     <nav class="navbar fixed-bottom navbar-dark bg-dark">
         <a class="navbar-brand" href="#"><small>&copy; 2019 Dinesh Velhal </small></a>
+        <form class="form-inline my-2 my-lg-0">
+            <small><a class="btn btn-success" href="attribution.html" role="button"><i class="fa fa-heart"></i> Thanks To</a>
+            <a class="btn btn-light" href="index.html" role="button"><i class="fa fa-home"></i> Home</a></small>
+        </form>
     </nav>
 
-    <br><br>
+    <br>    
 
-    <div class="container align-items-center text-center shadow-lg">
-
-        <!-- Wait for alert to be present -->
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for alert to be present</h4>
+    <div class="container align-items-center text-center">
+        <!-- 
+        ********************************************
+        Wait for alert to be present
+        ********************************************
+        -->
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Wait for alert to be present</h2>
+                <strong>Expected Conditions:</strong> 
+                <pre>alertIsPresent()</pre>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Test the JavaScript <strong>alert</strong> and <strong>prompt</strong></p>
+                        <button type="button" class="btn btn-primary" id="alert_trigger">Show Alert</button>
+                        <button type="button" class="btn btn-primary" id="prompt_trigger">Show Prompt</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <h2 style="display: none" id="confirm_ok">Confirm response: <span class="badge badge-success">OK</span></h2>
+                        <h2 style="display: none" id="confirm_cancelled">Confirm response: <span class="badge badge-danger">Cancelled</span></h2>
+                        <h2 style="display: none" id="alert_handled"><span class="badge badge-success">Alert handled</span></h2>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 text-left">
-                <pre>Expected Conditions: 
-alertIsPresent()</pre>
-            </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-4">
-                <p>Test the JavaScript <strong>alert</strong> and <strong>prompt</strong></p>
-                <button type="button" class="btn btn-primary" id="alert_trigger">Show Alert</button>
-                <button type="button" class="btn btn-primary" id="prompt_trigger">Show Prompt</button>
-                <p></p>
-            </div>
-            <div class="col-sm-8">
-                <h4 style="display: none" id="confirm_ok">Confirm response: <span class="badge badge-success">OK</span></h4>
-                <h4 style="display: none" id="confirm_cancelled">Confirm response: <span class="badge badge-danger">Cancelled</span></h4>
-                <h4 style="display: none" id="alert_handled"><span class="badge badge-success">Alert handled</span></h4>
-            </div>
-        </div>
 
-        <br><br>
+        <br>
 
-        <!-- Wait for element to be visible -->
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for element to be visible</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 text-left">
-                <pre>Expected Conditions: 
-visibilityOf(WebElement element)
+        <!-- 
+        ********************************************
+        Wait for element to be visible
+        ********************************************
+        -->
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Wait for element to be visible</h2>
+                <strong>Expected Conditions:</strong> 
+<pre>visibilityOf(WebElement element)
 visibilityOfElementLocated(By locator)
 elementToBeClickable(WebElement element)</pre>
             </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-4">
-                <p>Click the <strong>Trigger</strong> and an invisible button will be visible!</p>
-                <button type="button" class="btn btn-primary" id="visibility_trigger">Trigger</button>
-                <p></p>
-            </div>
-            <div class="col-sm-8">
-                <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
-                <button type="button" class="btn btn-danger" id="visibility_target" style="display: none" data-toggle="popover" title="Can you see me?" data-content="I just removed my invisibility cloak!!">Click Me</button>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Click the <strong>Trigger</strong> and an invisible button will be visible!</p>
+                        <button type="button" class="btn btn-primary" id="visibility_trigger">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
+                        <button type="button" class="btn btn-danger" id="visibility_target" style="display: none" data-toggle="popover" title="Can you see me?" data-content="I just removed my invisibility cloak!!">Click Me</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <br><br>
+        <br>
 
-        <!-- Wait for element to be invisible -->
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for element to be Invisible</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 text-left">
-                <pre>Expected Conditions: 
-invisibilityOf(WebElement element)
+        <!-- 
+        ********************************************
+        Wait for element to be Invisible
+        ********************************************
+        -->
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Wait for element to be Invisible</h2>
+                <strong>Expected Conditions:</strong> 
+<pre>invisibilityOf(WebElement element)
 invisibilityOfElementLocated(By locator)
 invisibilityOfElementWithText(By locator, java.lang.String text)</pre>
             </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-4">
-                <p>Click the <strong>Trigger</strong> and the spinner will disappear!</p>
-                <button type="button" class="btn btn-primary" id="invisibility_trigger">Trigger</button>
-                <p></p>
-            </div>
-            <div class="col-sm-8">
-                <p>This spinner will disappear after <strong>Trigger</strong> button is clicked.</p>
-                <div class="spinner-border text-primary" role="status" id="invisibility_target">
-                    <span class="sr-only">Loading...</span>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Click the <strong>Trigger</strong> and the spinner will disappear!</p>
+                        <button type="button" class="btn btn-primary" id="invisibility_trigger">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>This spinner will disappear after <strong>Trigger</strong> button is clicked.</p>
+                        <div class="spinner-border text-primary" role="status" id="invisibility_target">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <p style="display: none" id="spinner_gone">Thank God that spinner is gone!</p>
+                    </div>
                 </div>
-                <p style="display: none" id="spinner_gone">Thank God that spinner is gone!</p>
             </div>
         </div>
 
-        <br><br>
+        <br>
 
-        <!--Wait for element to be enabled-->
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for element to be enabled / Wait for an attribute to contain certain text</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 text-left">
-                <pre>Expected Conditions: 
-attributeContains(By locator, java.lang.String attribute, java.lang.String value)
+        <!-- 
+        ********************************************
+        Wait for element to be enabled
+        ********************************************
+        -->
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Wait for element to be enabled / Wait for an attribute to contain certain text</h2>
+                <strong>Expected Conditions:</strong> 
+<pre>attributeContains(By locator, java.lang.String attribute, java.lang.String value)
 attributeContains(WebElement element, java.lang.String attribute, java.lang.String value)
 attributeToBe(By locator, java.lang.String attribute, java.lang.String value)
 attributeToBe(WebElement element, java.lang.String attribute, java.lang.String value)
 elementToBeClickable(By locator)
 elementToBeClickable(WebElement element)</pre>
             </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-4">
-                <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become active.</p>
-                <button type="button" class="btn btn-primary" id="enabled_trigger">Trigger</button>
-                <p></p>
-            </div>
-            <div class="col-sm-8">
-                <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be active <br>and the <em>class</em> attribute will be <em>"btn btn-success"</em>.
-                </p>
-                <button type="button" class="btn btn-danger" id="enabled_target" data-toggle="popover" title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
-                    Button</button>
-                <p></p>
+            <div class="card-body">
+                <div class="row  align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become active.</p>
+                        <button type="button" class="btn btn-primary" id="enabled_trigger">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be active <br>and the <em>class</em> attribute will be <em>"btn btn-success"</em>.
+                        </p>
+                        <button type="button" class="btn btn-danger" id="enabled_target" data-toggle="popover" title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
+                            Button</button>
+                        <p></p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <br><br>
 
-        <!-- Wait for Page Title to change -->
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for Page Title to change</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 text-left">
-                <pre>Expected Conditions: 
-titleContains(java.lang.String title)
+        <br>
+
+        <!-- 
+        ********************************************
+        Wait for Page Title to change
+        ********************************************
+        -->
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Wait for Page Title to change</h2>
+                <strong>Expected Conditions:</strong> 
+<pre>titleContains(java.lang.String title)
 titleIs(java.lang.String title)</pre>
             </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-4">
+            <div class="card-body">
                 <p>Click the <strong>Trigger</strong> and the Page Title will change to "My New Title!"</p>
                 <button type="button" class="btn btn-primary" id="page_title_trigger">Trigger</button>
-                <p></p>
-            </div>
-            <div class="col-sm-8">
-
             </div>
         </div>
 
-        <br><br>
+        <br>
 
-        <!-- Wait for text/value to have specific values -->
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for text/value to have specific values</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 text-left">
-                <pre>Expected Conditions: 
-textMatches(By locator, java.util.regex.Pattern pattern)
+        <!-- 
+        ********************************************
+        Wait for text/value to have specific values
+        ********************************************
+        -->
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Wait for text/value to have specific values</h2>
+                <strong>Expected Conditions:</strong> 
+<pre>textMatches(By locator, java.util.regex.Pattern pattern)
 textToBe(By locator, java.lang.String value)
 textToBePresentInElement(WebElement element, java.lang.String text)
 textToBePresentInElementLocated(By locator, java.lang.String text)
 textToBePresentInElementValue(By locator, java.lang.String text)
 textToBePresentInElementValue(WebElement element, java.lang.String text)</pre>
-
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Click the <strong>Trigger</strong> to enter text in the textbox and change the button caption</p>
+                        <button type="button" class="btn btn-primary" id="text_value_trigger">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8 align-items-center">
+                        <form class="form-inline">
+                            <input type="text" class="form-control" placeholder="Creator of C" id="wait_for_value">
+                            <button class="btn btn-success" type="button" id="wait_for_text">
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                <span class="sr-only">Loading...</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-4">
-                <p>Click the <strong>Trigger</strong> to enter text in the textbox and change the button caption</p>
-                <button type="button" class="btn btn-primary" id="text_value_trigger">Trigger</button>
-                <p></p>
-            </div>
-            <div class="col-sm-8 align-items-center">
-                <form class="form-inline">
-                    <input type="text" class="form-control" placeholder="Creator of C" id="wait_for_value">
-                    <button class="btn btn-success" type="button" id="wait_for_text">
-                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        <span class="sr-only">Loading...</span>
-                    </button>
-                </form>
-            </div>
-        </div>
 
-        <br><br>
+        <br>
 
-        <!-- Wait for frame to be available and then switch to it -->
-        <div class="row  border border-secondary  align-items-center text-center">
-            <div class="col-sm-12 bg-secondary text-light">
-                <h4>Wait for frame to be available and then switch to it</h4>
-            </div>
-        </div>
-        <div class="row  border border-secondary  align-items-center text-center">
-                <div class="col-sm-12 text-left">
-                    <pre>Expected Conditions: 
+        <!-- 
+        ********************************************
+        Wait for frame to be available and then switch to it
+        ********************************************
+        -->
+        <div class="card text-center shadow">
+            <div class="card-header text-success">
+                <h2>Wait for frame to be available and then switch to it</h2>
+                <strong>Expected Conditions:</strong> 
+<pre>textMatches(By locator, java.util.regex.Pattern pattern)
 frameToBeAvailableAndSwitchToIt(By locator)
 frameToBeAvailableAndSwitchToIt(int frameLocator)
 frameToBeAvailableAndSwitchToIt(java.lang.String frameLocator)
 frameToBeAvailableAndSwitchToIt(WebElement frameLocator)</pre>
-                </div>
-        </div>
-        <div class="row  border border-secondary align-items-center text-center">
-            <div class="col-sm-4">
-                <p>Click the <strong>Trigger</strong> and a frame will appear after a few seconds</p>
-                <button type="button" class="btn btn-primary" id="wait_for_frame">Trigger</button>
-                <p></p>
             </div>
-            <div class="col-sm-8 align-items-center">
-                <p></p><iframe src="inner.html" style="display: none" id="frame" name="frm"></iframe>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Click the <strong>Trigger</strong> and a frame will appear after a few seconds</p>
+                        <button type="button" class="btn btn-primary" id="wait_for_frame">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8 align-items-center">
+                        <p></p><iframe src="inner.html" style="display: none" id="frame" name="frm"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <br><br>
+        <br>
     </div>
 
     <br><br><br><br>
