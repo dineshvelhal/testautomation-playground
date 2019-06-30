@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
-    <title>Keyboard & Mouse Events Playground!</title>
+    <title>Keyboard Events Playground!</title>
 </head>
 
 
@@ -19,10 +19,10 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand/logo -->
-        <a class="navbar-brand" href="#">Keyboard & Mouse Events Playground!</a>
+        <a class="navbar-brand" href="#">Keyboard Events Playground!</a>
     </nav>
-
-    <br><br><br><br>
+    
+    <br><br>
 
     <div class="container align-items-center text-center">
         <br>
@@ -59,34 +59,11 @@
         </div>
 
         <br>
-
-        <div class="card text-center shadow border-success">
-            <div class="card-header text-success">
-                <h2>Mouse Interactions</h2>
-                Perform mouse operations like <code>Click, Double-Click, Right-Click (Context-Click)</code> in the blue box below
-            </div>
-            <div class="card-body">
-                <div class="row align-items-center text-center">
-                    <div class="col-sm-6 p-3">
-                        <div class="bg-primary text-light shadow-sm" id="click_area" style="height: 100px">Perform mouse operations here</div>
-                    </div>
-                    <div class="col-sm-6">
-                        <label class="font-weight-bold" id="click_type" style="margin-right: 20px"></label>
-                        <label class="font-weight-bold" id="click_x" style="margin-right: 20px"></label>
-                        <label class="font-weight-bold" id="click_y"></label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-
     </div>
 
     <br><br><br><br>
 
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark fixed-bottom bg-dark">
         <a class="navbar-brand" href="#"><small>&copy; 2019 Dinesh Velhal </small></a>
         <form class="form-inline my-2 my-lg-0">
             <small><a class="btn btn-success" href="attribution.html" role="button"><i class="fa fa-heart"></i> Thanks To</a>
@@ -109,27 +86,6 @@
             var area = document.getElementById("area");
             console.log(area);
             area.addEventListener("keydown", handleKeyPress);
-
-            $("#click_area").dblclick(function(e){
-                $("#click_type").text("Double-Click");
-
-                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
-                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
-            });
-
-            $("#click_area").click(function(e){
-                $("#click_type").text("Click");
-
-                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
-                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
-            });
-
-            $("#click_area").contextmenu(function(e){
-                $("#click_type").text("Right-Click");
-
-                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
-                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
-            });
         });
 
         function handleKeyPress(zEvent) {

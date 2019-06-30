@@ -17,37 +17,76 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Brand/logo -->
-        <a class="navbar-brand" href="#">The Playground</a>
-    </nav>
-
-    <br>
-    <br>
-    <div class="container align-items-center text-center shadow-lg">
+    <div class="container align-items-center text-center">
         <header style="margin-bottom: 40px">
             <h1 class="text-success">The Playground for automation testers</h1>
-            <h3 class="text-success">Run tests on your automation framework!</h3>
-            <h5 class="text-success">Use this site as an <strong>Application Under Test</strong></h5>
+            <h3 class="text-success">an <strong>Application Under Test</strong></h3>
         </header>
-
-        <h4>Available Pages</h4>
-        
-        <div class="list-group" style="margin-bottom: 30px">
-            <a href="expected_conditions.html" class="list-group-item list-group-item-action">
-                Expected Conditions
-                <small class="text-info">Try various Expected Conditions E.g. Wait for an alert for a specific duration to show up</small>
-            </a>
-            <a href="keyboard_mouse_events.html" class="list-group-item list-group-item-action">
-                Keyboard and Mouse Interactions
-                <small class="text-info">Try various Keyboard actions (E.g. sendkeys, press special keys like Ctrl, Alt, Page-Down) and Mouse Events (E.g. Click, Right-Click, Double-Click)</small>
-            </a>
+    </div>
+    <div class="container shadow-lg">
+        <br>
+        <div class="card">
+            <div class="card-header">
+                <h4 class="font-weight-bolder">What is Playground?</h4>
+                <h5 class="card-title">Playground is a collection of web pages. Every web page has a set of UI elements that the automation framework can interact with.
+                    Thus you can use it for following purposes.
+                </h5>
+                <div class="card-group">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <p class="font-weight-bold">To test the Autoation</p>
+                                Use it as an Application Under Test to test the features of your Test Automation Framework.
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <p class="font-weight-bold">To learn the automation</p>
+                                Use it as a sample application for trying out test automation with tools like Selenium, Cypress & Testcafe.
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <p class="font-weight-bold">To evaluate the automation</p>
+                                Use it to evaluate third party automation tools and frameworks.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <br>
-    </div>
-    <br><br><br><br>
+        <div class="card">
+            <div class="card-header">
+                <h5 class="align-items-center text-center font-weight-bolder">Available Pages</h5>
+                <div class="list-group" style="margin-bottom: 30px">
+                    <h5>
+                        <a href="expected_conditions.html" class="list-group-item list-group-item-action">
+                            Expected Conditions
+                            <small class="text-info">Try various Expected Conditions E.g. Wait for an alert for a specific duration to show up</small>
+                        </a>
+                        <a href="keyboard_events.html" class="list-group-item list-group-item-action">
+                            Keyboard Interactions
+                            <small class="text-info">Try various Keyboard actions (E.g. sendkeys, press special keys like Ctrl, Alt, Page-Down)</small>
+                        </a>
+                        <a href="mouse_events.html" class="list-group-item list-group-item-action">
+                            Mouse Interactions
+                            <small class="text-info">Try various Mouse actions (E.g. Click, Right-Click, Double-Click)</small>
+                        </a>
+                    </h5>
+                </div>
+            </div>
+        </div>
 
-    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <br>
+    </div>
+    <br><br>
+
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#"><small>&copy; 2019 Dinesh Velhal </small></a>
         <form class="form-inline my-2 my-lg-0">
             <small><a class="btn btn-success" href="attribution.html" role="button"><i class="fa fa-heart"></i> Thanks To</a>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    <title>Mouse Events Playground!</title>
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">Mouse Events Playground!</a>
+    </nav>
+
+    <br><br>
+
+    <div class="container align-items-center text-center">
+        <br>
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h2>Mouse Interactions</h2>
+                Perform mouse operations like <code>Click, Double-Click, Right-Click (Context-Click)</code> in the blue box below
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-6 p-3">
+                        <div class="bg-primary text-light shadow-sm" id="click_area" style="height: 100px">Perform mouse operations here</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="font-weight-bold" id="click_type" style="margin-right: 20px"></label>
+                        <label class="font-weight-bold" id="click_x" style="margin-right: 20px"></label>
+                        <label class="font-weight-bold" id="click_y"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <br><br><br><br>
+
+    <nav class="navbar navbar-dark fixed-bottom bg-dark">
+        <a class="navbar-brand" href="#"><small>&copy; 2019 Dinesh Velhal </small></a>
+        <form class="form-inline my-2 my-lg-0">
+            <small><a class="btn btn-success" href="attribution.html" role="button"><i class="fa fa-heart"></i> Thanks To</a>
+            <a class="btn btn-light" href="index.html" role="button"><i class="fa fa-home"></i> Home</a></small>
+        </form>
+    </nav>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+    <script>
+        // All functions
+        $(document).ready(function() {
+            // Initialize the popover
+            $('[data-toggle="popover "]').popover();
+
+            $("#click_area").dblclick(function(e){
+                $("#click_type").text("Double-Click");
+
+                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
+                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
+            });
+
+            $("#click_area").click(function(e){
+                $("#click_type").text("Click");
+
+                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
+                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
+            });
+
+            $("#click_area").contextmenu(function(e){
+                $("#click_type").text("Right-Click");
+
+                $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
+                $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
+            });
+        });
+    </script>
+</body>
+
+</html>
