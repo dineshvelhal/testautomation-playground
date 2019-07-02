@@ -1,6 +1,6 @@
-# Playground
+# About Playground
 
-Playground is a collection of static web pages that simulate some of the important interactions that users do with the web pages. It thus provides a way for automation testers to test their automation framework against these web pages.
+Playground is a collection of web pages. Every web page has a set of UI elements that the automation framework can interact with. Thus you can use it for following purposes.
 
 ## Why Playground
 
@@ -8,6 +8,14 @@ Test Automation code is a living entity. It undergoes changes all the time. You 
 
 All this is still fine, when you write test automation code either for your own use or for the use of small testing teams. You can quickly fix the issues and can bring automation on track again. The things aren't so easy and straightforward, when the End Userbase is large, varied and have varied expectations from your automation framework. It becomes imperative that you test your automation framework features thoroughly and ensure it works as expected when you release a new version.
 
-## Testing core automation functionality
+## Available Pages
 
-What if I tell you, you should thoroughly test core automation framework features before you release it to your user base?
+### To test the Automation
+Use it as an Application Under Test to test the features of your Test Automation Framework.
+
+### To learn the Automation
+Use it as a sample application for trying out test automation with tools like Selenium, Cypress & Testcafe.
+
+### To evaluate the Automation
+Use it to evaluate third party automation tools and frameworks.
+
