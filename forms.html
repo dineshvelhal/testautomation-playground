@@ -27,10 +27,227 @@
     <br>
     <br>
     
-    <div class="container text-center">
-        <h1 class="text-muted">
-            Page Under Construction
-        </h1>
+    <div class="container">
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h3>Basic Form Controls</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="exp" aria-describedby="expHelp" placeholder="years of automation experience">
+                                <small id="email_help" class="form-text text-muted">Validation Text</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_java" value="JAVA">
+                                    <label class="form-check-label" for="check_java">Java</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_python" value="PYTHON">
+                                    <label class="form-check-label" for="check_python">Python</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_javascript" value="JAVASCRIPT">
+                                    <label class="form-check-label" for="check_javascript">JavaScript</label>
+                                </div>
+                                <small id="check_validate" class="form-text text-muted">Validation Text</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="rad_selenium" value="SELENIUM" name="tool">
+                                    <label class="form-check-label" for="rad_selenium">Selenium</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="rad_protractor" value="PROTRACTOR" name="tool">
+                                    <label class="form-check-label" for="rad_protractor">Protractor</label>
+                                </div>
+                                <small id="rad_validate" class="form-text text-muted">Validation Text</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="select_tool">Primary Skill</label>
+                                <select class="form-control form-control-sm" id="select_tool">
+                                    <option>Selenium</option>
+                                    <option>Protractor</option>
+                                    <option>Cypress</option>
+                                </select>
+                                <small id="select_tool_validate" class="form-text text-muted">Validation Text</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="select_lang">Choose Language</label>
+                                <select class="form-control form-control-sm" id="select_lang" size="4" multiple>
+                                    <option>Java</option>
+                                    <option>Python</option>
+                                    <option>JavaScript</option>
+                                    <option>TypeScript</option>
+                                </select>
+                                <small id="select_lang_validate" class="form-text text-muted">Validation Text</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <textarea class="form-control form-control-sm" id="notes" rows="6" placeholder="id=notes"></textarea>
+                                <small id="area_notes_validate" class="form-text text-muted">Validation Text</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <label for="common_sense">Mandatory Skill</label>
+                            <input class="form-control form-control-sm" type="text" id="common_sense" placeholder="Common Sense" readonly>
+                        </div>
+                        <div class="col">
+                            
+                        </div>
+                        <div class="col">
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h3>Form with Validations</h3>
+            </div>
+            <div class="card-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom03">City</label>
+                                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                <div class="invalid-feedback" id="invalid_city">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom04">State</label>
+                                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                                <div class="invalid-feedback" id="invalid_state">
+                                    Please provide a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom05">Zip</label>
+                                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                                <div class="invalid-feedback" id="invalid_zip">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback" id="invalid_terms">
+                                You must agree before submitting.
+                            </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit Form</button>
+                    </form>
+                        
+                    <script>
+                        (function() {
+                            'use strict';
+                            window.addEventListener('load', function() {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function(form) {
+                                    form.addEventListener('submit', function(event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                });
+                            }, false);
+                        })();
+                    </script>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h3>HTML5 Controls</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h3>Bootstrap Custom Controls</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h3>Non-English Labels and Locators</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="नाव" aria-describedby="expHelp" placeholder="id=नाव">
+                                <small id="नाव तपासा" class="form-text text-muted">Validation Text</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="मराठी" value="मराठी">
+                                    <label class="form-check-label" for="मराठी">मराठी</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="ગુજરાતી" value="ગુજરાતી">
+                                    <label class="form-check-label" for="ગુજરાતી">ગુજરાતી</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="ਪੰਜਾਬੀ" value="ਪੰਜਾਬੀ">
+                                    <label class="form-check-label" for="ਪੰਜਾਬੀ">ਪੰਜਾਬੀ</label>
+                                </div>
+                                <small id="check_validate" class="form-text text-muted">Validation Text</small>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     
 

@@ -59,9 +59,7 @@
         -->
         <div class="card text-center shadow  border-success">
             <div class="card-header text-success">
-                <h2>Wait for alert to be present</h2>
-                <strong>Expected Conditions:</strong> 
-                <pre>alertIsPresent()</pre>
+                <h3>Wait for alert to be present</h3>
             </div>
             <div class="card-body">
                 <div class="row align-items-center text-center">
@@ -72,9 +70,9 @@
                         <p></p>
                     </div>
                     <div class="col-sm-8">
-                        <h2 style="display: none" id="confirm_ok">Confirm response: <span class="badge badge-success">OK</span></h2>
-                        <h2 style="display: none" id="confirm_cancelled">Confirm response: <span class="badge badge-danger">Cancelled</span></h2>
-                        <h2 style="display: none" id="alert_handled"><span class="badge badge-success">Alert handled</span></h2>
+                        <h3 style="display: none" id="confirm_ok">Confirm response: <span class="badge badge-success">OK</span></h3>
+                        <h3 style="display: none" id="confirm_cancelled">Confirm response: <span class="badge badge-danger">Cancelled</span></h3>
+                        <h3 style="display: none" id="alert_handled"><span class="badge badge-success">Alert handled</span></h3>
                     </div>
                 </div>
             </div>
@@ -89,11 +87,7 @@
         -->
         <div class="card text-center shadow  border-success">
             <div class="card-header text-success">
-                <h2>Wait for element to be visible</h2>
-                <strong>Expected Conditions:</strong> 
-<pre>visibilityOf(WebElement element)
-visibilityOfElementLocated(By locator)
-elementToBeClickable(WebElement element)</pre>
+                <h3>Wait for element to be visible</h3>
             </div>
             <div class="card-body">
                 <div class="row align-items-center text-center">
@@ -119,11 +113,7 @@ elementToBeClickable(WebElement element)</pre>
         -->
         <div class="card text-center shadow  border-success">
             <div class="card-header text-success">
-                <h2>Wait for element to be Invisible</h2>
-                <strong>Expected Conditions:</strong> 
-<pre>invisibilityOf(WebElement element)
-invisibilityOfElementLocated(By locator)
-invisibilityOfElementWithText(By locator, java.lang.String text)</pre>
+                <h3>Wait for element to be Invisible</h3>
             </div>
             <div class="card-body">
                 <div class="row align-items-center text-center">
@@ -152,14 +142,7 @@ invisibilityOfElementWithText(By locator, java.lang.String text)</pre>
         -->
         <div class="card text-center shadow  border-success">
             <div class="card-header text-success">
-                <h2>Wait for element to be enabled / Wait for an attribute to contain certain text</h2>
-                <strong>Expected Conditions:</strong> 
-<pre>attributeContains(By locator, java.lang.String attribute, java.lang.String value)
-attributeContains(WebElement element, java.lang.String attribute, java.lang.String value)
-attributeToBe(By locator, java.lang.String attribute, java.lang.String value)
-attributeToBe(WebElement element, java.lang.String attribute, java.lang.String value)
-elementToBeClickable(By locator)
-elementToBeClickable(WebElement element)</pre>
+                <h3>Wait for element to be enabled / Wait for an attribute to contain certain text</h3>
             </div>
             <div class="card-body">
                 <div class="row  align-items-center text-center">
@@ -189,10 +172,7 @@ elementToBeClickable(WebElement element)</pre>
         -->
         <div class="card text-center shadow  border-success">
             <div class="card-header text-success">
-                <h2>Wait for Page Title to change</h2>
-                <strong>Expected Conditions:</strong> 
-<pre>titleContains(java.lang.String title)
-titleIs(java.lang.String title)</pre>
+                <h3>Wait for Page Title to change</h3>
             </div>
             <div class="card-body">
                 <p>Click the <strong>Trigger</strong> and the Page Title will change to "My New Title!"</p>
@@ -209,23 +189,16 @@ titleIs(java.lang.String title)</pre>
         -->
         <div class="card text-center shadow  border-success">
             <div class="card-header text-success">
-                <h2>Wait for text/value to have specific values</h2>
-                <strong>Expected Conditions:</strong> 
-<pre>textMatches(By locator, java.util.regex.Pattern pattern)
-textToBe(By locator, java.lang.String value)
-textToBePresentInElement(WebElement element, java.lang.String text)
-textToBePresentInElementLocated(By locator, java.lang.String text)
-textToBePresentInElementValue(By locator, java.lang.String text)
-textToBePresentInElementValue(WebElement element, java.lang.String text)</pre>
+                <h3>Wait for text/value to have specific values</h3>
             </div>
             <div class="card-body">
                 <div class="row align-items-center text-center">
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <p>Click the <strong>Trigger</strong> to enter text in the textbox and change the button caption</p>
                         <button type="button" class="btn btn-primary" id="text_value_trigger">Trigger</button>
                         <p></p>
                     </div>
-                    <div class="col-sm-8 align-items-center">
+                    <div class="col-sm-6 align-items-center">
                         <form class="form-inline">
                             <input type="text" class="form-control" placeholder="Creator of C" id="wait_for_value">
                             <button class="btn btn-success" type="button" id="wait_for_text">
@@ -247,25 +220,19 @@ textToBePresentInElementValue(WebElement element, java.lang.String text)</pre>
         -->
         <div class="card text-center shadow  border-success">
             <div class="card-header text-success">
-                <h2>Wait for frame to be available and then switch to it</h2>
-                <strong>Expected Conditions:</strong> 
-<pre>textMatches(By locator, java.util.regex.Pattern pattern)
-frameToBeAvailableAndSwitchToIt(By locator)
-frameToBeAvailableAndSwitchToIt(int frameLocator)
-frameToBeAvailableAndSwitchToIt(java.lang.String frameLocator)
-frameToBeAvailableAndSwitchToIt(WebElement frameLocator)</pre>
+                <h3>Wait for frame to be available and then switch to it</h3>
             </div>
             <div class="card-body">
                 <div class="row align-items-center text-center">
-                    <div class="col-sm-4">
+                    <div class="col-sm-7">
                         <p>Click the <strong>Trigger</strong> and a frame will appear after a few seconds</p>
                         <button type="button" class="btn btn-primary" id="wait_for_frame">Trigger</button>
                         <p></p>
                     </div>
-                    <div class="col-sm-8 align-items-center">
+                    <div class="col-sm-5 align-items-center">
                         <p></p>
-                        <div class="embed-responsive embed-responsive-21by9">
-                                <iframe src="inner.html" style="display: none" id="frame" name="frm"></iframe>
+                        <div class="embed-responsive embed-responsive-21by9 shadow" style="display: none" id="frame">
+                                <iframe src="inner.html" name="frm"></iframe>
                         </div>
                     </div>
                 </div>
