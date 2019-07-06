@@ -2,18 +2,62 @@
 <html>
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mouse Actions</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Added for the Hover drop-down menu -->
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 4px;
+            font-size: 16px;
+            border: none;
+        }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-    <title>Mouse Events Playground!</title>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content p {
+            color: black;
+            padding: 3px 4px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content p:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
 </head>
 
 
@@ -21,7 +65,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand/logo -->
-        <a class="navbar-brand" href="#">Mouse Events Playground!</a>
+        <a class="navbar-brand" href="#">Mouse Actions</a>
     </nav>
 
     <br><br>
@@ -30,13 +74,15 @@
         <br>
         <div class="card text-center shadow border-success">
             <div class="card-header text-success">
-                <h2>Mouse Interactions</h2>
-                Perform mouse operations like <code>Click, Double-Click, Right-Click (Context-Click)</code> in the blue box below
+                <h2>Mouse Click Actions</h2>
+                Perform mouse operations like <code>Click, Double-Click, Right-Click (Context-Click)</code> in the blue
+                box below
             </div>
             <div class="card-body">
                 <div class="row align-items-center text-center">
                     <div class="col-sm-6 p-3">
-                        <div class="bg-primary text-light shadow-sm" id="click_area" style="height: 200px">Perform mouse operations here</div>
+                        <div class="bg-primary text-light shadow-sm" id="click_area" style="height: 200px">Perform mouse
+                            operations here</div>
                     </div>
                     <div class="col-sm-6">
                         <label class="font-weight-bold" id="click_type" style="margin-right: 20px"></label>
@@ -46,52 +92,159 @@
                 </div>
             </div>
         </div>
+
         <br>
+
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h2>Mouse Hover</h2>
+                Perform mouse hover to interact with drop-down menu
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-6 p-3">
+                        <div class="dropdown">
+                            <button class="dropbtn">Choose Language</button>
+                            <div class="dropdown-content">
+                                <p id="dd_java">Java</p>
+                                <p id="dd_python">Python</p>
+                                <p id="dd_javascript">JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-3">
+                        <h4 id="hover_validate" class="form-text text-success"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h2>Drag and Drop</h2>
+                Drag blue box on the green box
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary" id="drag_source" draggable="true"
+                            ondragstart="drag(event)">Drop me on to the green
+                            box</button>
+
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="bg-success text-light shadow" id="drop_target" style="height: 100px;"
+                            ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <h3>Target</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+        </div>
     </div>
+
+    <br>
+
+
 
     <br><br><br><br>
 
-    <nav class="navbar navbar-dark fixed-bottom bg-dark">
-        <a class="navbar-brand" href="#"><small>&copy; 2019 Dinesh Velhal </small></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><small class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </small></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
         <form class="form-inline my-2 my-lg-0">
-            <small><a class="btn btn-success" href="attribution.html" role="button"><i class="fa fa-heart"></i> Thanks To</a>
-            <a class="btn btn-light" href="home.html" role="button"><i class="fa fa-home"></i> Home</a></small>
+            <small><a class="btn blue-gradient btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="home.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></small>
         </form>
     </nav>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- JQuery-UI -->
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 
     <script>
         // All functions
-        $(document).ready(function() {
+        $(document).ready(function () {
+
             // Initialize the popover
             $('[data-toggle="popover "]').popover();
 
-            $("#click_area").dblclick(function(e){
+            $("#click_area").dblclick(function (e) {
                 $("#click_type").text("Double-Click");
 
                 $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
                 $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
             });
 
-            $("#click_area").click(function(e){
+            $("#click_area").click(function (e) {
                 $("#click_type").text("Click");
 
                 $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
                 $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
             });
 
-            $("#click_area").contextmenu(function(e){
+            $("#click_area").contextmenu(function (e) {
                 $("#click_type").text("Right-Click");
 
                 $("#click_x").text("Left: " + Math.floor((e.pageX - $(this).offset().left)));
                 $("#click_y").text("Top: " + Math.floor((e.pageY - $(this).offset().top)));
             });
+
+
+            // hover
+            $("#dd_java, #dd_python, #dd_javascript").click(function (e) {
+                $("#hover_validate").text($(this).text());
+            });
+
+
         });
+    </script>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            //ev.target.appendChild(document.getElementById(data));
+
+            var tg = ev.target;
+            tg.className = "bg-danger text-light shadow";
+            tg.innerHTML = "<h3>Drop is successful!</h3>";
+        }
     </script>
 </body>
 

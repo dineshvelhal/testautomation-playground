@@ -2,18 +2,18 @@
 <html>
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title>Forms</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Form Interactions</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 
@@ -26,7 +26,7 @@
 
     <br>
     <br>
-    
+
     <div class="container">
         <div class="card text-center shadow border-success">
             <div class="card-header text-success">
@@ -37,8 +37,9 @@
                     <div class="form-row align-items-center">
                         <div class="col-md-4 mb-4">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" id="exp" aria-describedby="expHelp" placeholder="years of automation experience">
-                                <small id="email_help" class="form-text text-muted">Validation Text</small>
+                                <input type="text" class="form-control form-control-sm" id="exp"
+                                    aria-describedby="expHelp" placeholder="years of automation experience">
+                                <small id="exp_help" class="form-text text-success"></small>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
@@ -52,23 +53,26 @@
                                     <label class="form-check-label" for="check_python">Python</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="check_javascript" value="JAVASCRIPT">
+                                    <input class="form-check-input" type="checkbox" id="check_javascript"
+                                        value="JAVASCRIPT">
                                     <label class="form-check-label" for="check_javascript">JavaScript</label>
                                 </div>
-                                <small id="check_validate" class="form-text text-muted">Validation Text</small>
+                                <small id="check_validate" class="form-text text-success"></small>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="rad_selenium" value="SELENIUM" name="tool">
+                                    <input class="form-check-input" type="radio" id="rad_selenium" value="SELENIUM"
+                                        name="tool">
                                     <label class="form-check-label" for="rad_selenium">Selenium</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="rad_protractor" value="PROTRACTOR" name="tool">
+                                    <input class="form-check-input" type="radio" id="rad_protractor" value="PROTRACTOR"
+                                        name="tool">
                                     <label class="form-check-label" for="rad_protractor">Protractor</label>
                                 </div>
-                                <small id="rad_validate" class="form-text text-muted">Validation Text</small>
+                                <small id="rad_validate" class="form-text text-success"></small>
                             </div>
                         </div>
                     </div>
@@ -81,9 +85,10 @@
                                     <option>Protractor</option>
                                     <option>Cypress</option>
                                 </select>
-                                <small id="select_tool_validate" class="form-text text-muted">Validation Text</small>
+                                <small id="select_tool_validate" class="form-text text-success"></small>
                             </div>
                         </div>
+
                         <div class="col-md-4 mb-4">
                             <div class="form-group">
                                 <label for="select_lang">Choose Language</label>
@@ -93,26 +98,28 @@
                                     <option>JavaScript</option>
                                     <option>TypeScript</option>
                                 </select>
-                                <small id="select_lang_validate" class="form-text text-muted">Validation Text</small>
+                                <small id="select_lang_validate" class="form-text text-success"></small>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="form-group">
-                                <textarea class="form-control form-control-sm" id="notes" rows="6" placeholder="id=notes"></textarea>
-                                <small id="area_notes_validate" class="form-text text-muted">Validation Text</small>
+                                <textarea class="form-control form-control-sm" id="notes" rows="6"
+                                    placeholder="id=notes"></textarea>
+                                <small id="area_notes_validate" class="form-text text-success"></small>
                             </div>
                         </div>
                     </div>
                     <div class="form-row align-items-center">
                         <div class="col-md-4 mb-4">
                             <label for="common_sense">Mandatory Skill</label>
-                            <input class="form-control form-control-sm" type="text" id="common_sense" placeholder="Common Sense" readonly>
+                            <input class="form-control form-control-sm" type="text" id="common_sense"
+                                placeholder="Common Sense" readonly>
                         </div>
                         <div class="col-md-4 mb-4">
-                            
+
                         </div>
                         <div class="col-md-4 mb-4">
-                            
+
                         </div>
                     </div>
                 </form>
@@ -126,32 +133,30 @@
                 <h3>Form with Validations</h3>
             </div>
             <div class="card-body">
-                    <form class="needs-validation" novalidate>
-                        <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                                <label for="validationCustom03">City</label>
-                                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-                                <div class="invalid-feedback" id="invalid_city">
-                                    Please provide a valid city.
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label for="validationCustom04">State</label>
-                                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-                                <div class="invalid-feedback" id="invalid_state">
-                                    Please provide a valid state.
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label for="validationCustom05">Zip</label>
-                                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-                                <div class="invalid-feedback" id="invalid_zip">
-                                    Please provide a valid zip.
-                                </div>
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                            <div class="invalid-feedback" id="invalid_city">
+                                Please provide a valid city.
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="form-check">
+                        <div class="col-md-3 mb-3">
+                            <input type="text" class="form-control" id="validationCustom04" placeholder="State"
+                                required>
+                            <div class="invalid-feedback" id="invalid_state">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                            <div class="invalid-feedback" id="invalid_zip">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                             <label class="form-check-label" for="invalidCheck">
                                 Agree to terms and conditions
@@ -159,30 +164,30 @@
                             <div class="invalid-feedback" id="invalid_terms">
                                 You must agree before submitting.
                             </div>
-                            </div>
                         </div>
-                        <button class="btn btn-primary" type="submit">Submit Form</button>
-                    </form>
-                        
-                    <script>
-                        (function() {
-                            'use strict';
-                            window.addEventListener('load', function() {
-                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                                var forms = document.getElementsByClassName('needs-validation');
-                                // Loop over them and prevent submission
-                                var validation = Array.prototype.filter.call(forms, function(form) {
-                                    form.addEventListener('submit', function(event) {
-                                        if (form.checkValidity() === false) {
-                                            event.preventDefault();
-                                            event.stopPropagation();
-                                        }
-                                        form.classList.add('was-validated');
-                                    }, false);
-                                });
-                            }, false);
-                        })();
-                    </script>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit Form</button>
+                </form>
+
+                <script>
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
             </div>
         </div>
 
@@ -194,7 +199,7 @@
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    
+
                 </div>
             </div>
         </div>
@@ -207,7 +212,7 @@
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    
+
                 </div>
             </div>
         </div>
@@ -218,56 +223,147 @@
             <div class="card-header text-success">
                 <h3>Non-English Labels and Locators</h3>
             </div>
+
+
+
             <div class="card-body">
-                <form>
-                    <div class="form-row align-items-center">
-                        <div class="col-md-6 mb-6">
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" id="नाव" aria-describedby="expHelp" placeholder="id=नाव">
-                                <small id="नाव तपासा" class="form-text text-muted">Validation Text</small>
+                                <input type="text" class="form-control form-control-sm" id="नाव"
+                                    aria-describedby="expHelp">
+                                <label for="नाव" class="">आपले नांव लिहा</label>
+                                <small id="नाव_तपासा" class="form-text text-success"></small>
                             </div>
+
                         </div>
-                        <div class="col-md-6 mb-6">
+                    </div>
+                    <div class="col">
+                        <form>
                             <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="मराठी" value="मराठी">
+                                <div class="form-check form-check-inline" style="padding-right: 30px;">
+                                    <input class=" form-check-input" type="checkbox" id="मराठी" value="मराठी">
                                     <label class="form-check-label" for="मराठी">मराठी</label>
                                 </div>
-                                <div class="form-check form-check-inline">
+                                <div class="form-check form-check-inline" style="padding-right: 30px;">
                                     <input class="form-check-input" type="checkbox" id="ગુજરાતી" value="ગુજરાતી">
                                     <label class="form-check-label" for="ગુજરાતી">ગુજરાતી</label>
                                 </div>
-                                <div class="form-check form-check-inline">
+                                <div class="form-check form-check-inline" style="padding-right: 30px;">
                                     <input class="form-check-input" type="checkbox" id="ਪੰਜਾਬੀ" value="ਪੰਜਾਬੀ">
                                     <label class="form-check-label" for="ਪੰਜਾਬੀ">ਪੰਜਾਬੀ</label>
                                 </div>
-                                <small id="check_validate" class="form-text text-muted">Validation Text</small>
+                                <small id="check_validate_non_english" class="form-text text-success"></small>
                             </div>
-                        </div>
+
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-    
+
 
 
     <br><br><br><br>
-    
-    <nav class="navbar fixed-bottom navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><small>&copy; 2019 Dinesh Velhal </small></a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><small class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </small></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
         <form class="form-inline my-2 my-lg-0">
-            <small><a class="btn btn-success" href="attribution.html" role="button"><i class="fa fa-heart"></i> Thanks To</a>
-            <a class="btn btn-light" href="home.html" role="button"><i class="fa fa-home"></i> Home</a></small>
+            <small><a class="btn blue-gradient btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="home.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></small>
         </form>
     </nav>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // textbox
+            $("#exp").on("change keyup paste click", function () {
+                $("#exp_help").text($(this).val());
+            });
+
+            // checkbox
+            $("#check_java, #check_python, #check_javascript").on("change keyup click", function () {
+                $("#check_validate").text(
+                    (($("#check_java").prop("checked") ? $("#check_java").val() : "")
+                        + " "
+                        + ($("#check_python").prop("checked") ? $("#check_python").val() : "")
+                        + " "
+                        + ($("#check_javascript").prop("checked") ? $("#check_javascript").val() : "")).trim()
+                );
+            });
+
+            // radio button
+            $("#rad_selenium, #rad_protractor").on("change keyup click", function () {
+                $("#rad_validate").text(
+                    ($("#rad_selenium").prop("checked") ? $("#rad_selenium").val() : "")
+                    + ""
+                    + ($("#rad_protractor").prop("checked") ? $("#rad_protractor").val() : "")
+                );
+            });
+
+            // text area
+            $("#notes").on("change keyup paste click", function () {
+                $("#area_notes_validate").text($(this).val());
+            });
+
+            // dropdown 
+            $("#select_tool").on("change keyup click", function () {
+                $("#select_tool_validate").text($(this).children("option:selected").val());
+            });
+
+            // multi-select
+            $("#select_lang").on("change keyup click", function () {
+                $("#select_lang_validate").text($(this).val());
+            });
+
+            // non-english textbox
+            $("#नाव").on("change keyup paste click", function () {
+                $("#नाव_तपासा").text($(this).val());
+            });
+
+            // non-english checkbox
+            $("#मराठी, #ગુજરાતી, #ਪੰਜਾਬੀ").on("change keyup click", function () {
+                $("#check_validate_non_english").text(
+                    (($("#मराठी").prop("checked") ? $("#मराठी").val() : "")
+                        + " "
+                        + ($("#ગુજરાતી").prop("checked") ? $("#ગુજરાતી").val() : "")
+                        + " "
+                        + ($("#ਪੰਜਾਬੀ").prop("checked") ? $("#ਪੰਜਾਬੀ").val() : "")).trim()
+                );
+            });
+
+        });
+    </script>
 </body>
 
 </html>

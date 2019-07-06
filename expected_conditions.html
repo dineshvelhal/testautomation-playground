@@ -2,18 +2,18 @@
 <html>
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title>Expected Conditions Playground!</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wait Conditions</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 
@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand/logo -->
-        <a class="navbar-brand abs" href="#">Expected Conditions Playground</a>
+        <a class="navbar-brand abs" href="#">Wait Conditions Playground</a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <form class="form-inline">
@@ -49,7 +49,7 @@
         </ul>
     </nav>
 
-    <br>    
+    <br>
 
     <div class="container align-items-center text-center">
         <!-- 
@@ -70,9 +70,12 @@
                         <p></p>
                     </div>
                     <div class="col-sm-8">
-                        <h3 style="display: none" id="confirm_ok">Confirm response: <span class="badge badge-success">OK</span></h3>
-                        <h3 style="display: none" id="confirm_cancelled">Confirm response: <span class="badge badge-danger">Cancelled</span></h3>
-                        <h3 style="display: none" id="alert_handled"><span class="badge badge-success">Alert handled</span></h3>
+                        <h3 style="display: none" id="confirm_ok">Confirm response: <span
+                                class="badge badge-success">OK</span></h3>
+                        <h3 style="display: none" id="confirm_cancelled">Confirm response: <span
+                                class="badge badge-danger">Cancelled</span></h3>
+                        <h3 style="display: none" id="alert_handled"><span class="badge badge-success">Alert
+                                handled</span></h3>
                     </div>
                 </div>
             </div>
@@ -98,7 +101,9 @@
                     </div>
                     <div class="col-sm-8">
                         <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
-                        <button type="button" class="btn btn-danger" id="visibility_target" style="display: none" data-toggle="popover" title="Can you see me?" data-content="I just removed my invisibility cloak!!">Click Me</button>
+                        <button type="button" class="btn btn-danger" id="visibility_target" style="display: none"
+                            data-toggle="popover" title="Can you see me?"
+                            data-content="I just removed my invisibility cloak!!">Click Me</button>
                     </div>
                 </div>
             </div>
@@ -147,14 +152,18 @@
             <div class="card-body">
                 <div class="row  align-items-center text-center">
                     <div class="col-sm-4">
-                        <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become active.</p>
+                        <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become
+                            active.</p>
                         <button type="button" class="btn btn-primary" id="enabled_trigger">Trigger</button>
                         <p></p>
                     </div>
                     <div class="col-sm-8">
-                        <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be active <br>and the <em>class</em> attribute will be <em>"btn btn-success"</em>.
+                        <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be
+                            active <br>and the <em>class</em> attribute will be <em>"btn btn-success"</em>.
                         </p>
-                        <button type="button" class="btn btn-danger" id="enabled_target" data-toggle="popover" title="Yay! I am super active now!" data-content="See, you just clicked me!!" disabled>Disabled
+                        <button type="button" class="btn btn-danger" id="enabled_target" data-toggle="popover"
+                            title="Yay! I am super active now!" data-content="See, you just clicked me!!"
+                            disabled>Disabled
                             Button</button>
                         <p></p>
                     </div>
@@ -194,7 +203,8 @@
             <div class="card-body">
                 <div class="row align-items-center text-center">
                     <div class="col-sm-6">
-                        <p>Click the <strong>Trigger</strong> to enter text in the textbox and change the button caption</p>
+                        <p>Click the <strong>Trigger</strong> to enter text in the textbox and change the button caption
+                        </p>
                         <button type="button" class="btn btn-primary" id="text_value_trigger">Trigger</button>
                         <p></p>
                     </div>
@@ -232,7 +242,7 @@
                     <div class="col-sm-5 align-items-center">
                         <p></p>
                         <div class="embed-responsive embed-responsive-21by9 shadow" style="display: none" id="frame">
-                                <iframe src="inner.html" name="frm"></iframe>
+                            <iframe src="inner.html" name="frm"></iframe>
                         </div>
                     </div>
                 </div>
@@ -243,19 +253,39 @@
     </div>
 
     <br><br><br><br>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><small>&copy; 2019 Dinesh Velhal </small></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><small class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </small></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
         <form class="form-inline my-2 my-lg-0">
-            <small><a class="btn btn-success" href="attribution.html" role="button"><i class="fa fa-heart"></i> Thanks To</a>
-            <a class="btn btn-light" href="home.html" role="button"><i class="fa fa-home"></i> Home</a></small>
+            <small><a class="btn blue-gradient btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="home.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></small>
         </form>
     </nav>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 
     <script>
         // sleep for "ms" milliseconds
@@ -288,12 +318,12 @@
         }
 
         // All functions
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Initialize the popover
             $('[data-toggle="popover"]').popover();
 
             // wait for element visible
-            $("#visibility_trigger").click(async function() {
+            $("#visibility_trigger").click(async function () {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
@@ -305,7 +335,7 @@
             });
 
             // wait for element invisible
-            $("#invisibility_trigger").click(async function() {
+            $("#invisibility_trigger").click(async function () {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
@@ -318,7 +348,7 @@
             });
 
             // wait for element enabled
-            $("#enabled_trigger").click(async function() {
+            $("#enabled_trigger").click(async function () {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
@@ -333,7 +363,7 @@
             });
 
             // wait for alert
-            $("#alert_trigger").click(async function() {
+            $("#alert_trigger").click(async function () {
                 $("#confirm_cancelled").hide();
                 $("#confirm_ok").hide();
                 $("#alert_handled").hide();
@@ -350,7 +380,7 @@
             });
 
             // wait for confirm
-            $("#prompt_trigger").click(async function() {
+            $("#prompt_trigger").click(async function () {
                 $("#confirm_cancelled").hide();
                 $("#confirm_ok").hide();
                 $("#alert_handled").hide();
@@ -371,7 +401,7 @@
             });
 
             // Wait for Page Title to change
-            $("#page_title_trigger").click(async function() {
+            $("#page_title_trigger").click(async function () {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
@@ -383,7 +413,7 @@
             });
 
             // Wait for text/value to have specific values
-            $("#text_value_trigger").click(async function() {
+            $("#text_value_trigger").click(async function () {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
@@ -394,9 +424,9 @@
 
                 finishWaitState($(this), origTarget);
             });
-            
+
             // wait for element visible
-            $("#wait_for_frame").click(async function() {
+            $("#wait_for_frame").click(async function () {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
