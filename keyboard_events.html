@@ -9,11 +9,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
 </head>
 
 
@@ -33,8 +33,10 @@
                 <h2>Keyboard Actions</h2>
                 <div class="col-sm-12 text-center">
                     Type normal keys or any special key combinations inside the TextArea below.
-                    <br>Try keys like <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Meta</kbd>,
-                    <kbd>Home</kbd>, <kbd>Down</kbd> and <kbd>PageUp</kbd>
+                    <br>Try keys like <kbd class="bg-success">Ctrl</kbd>, <kbd class="bg-success">Alt</kbd>, <kbd
+                        class="bg-success">Shift</kbd>, <kbd class="bg-success">Meta</kbd>,
+                    <kbd class="bg-success">Home</kbd>, <kbd class="bg-success">Down</kbd> and <kbd
+                        class="bg-success">PageUp</kbd>
                 </div>
             </div>
             <div class="card-body">
@@ -46,17 +48,19 @@
                 <div class="row align-items-center text-center">
                     <div class="col-sm-3"><strong style="margin-right: 10px">Modifier key Status: </strong></div>
                     <div class="col-sm-3">
-                        <span class="badge badge-success" id="meta" style="display: none ">Meta</span>
-                        <span class="badge badge-success" id="ctrl" style="display: none ">Ctrl</span>
-                        <span class="badge badge-success" id="alt" style="display: none ">Alt</span>
-                        <span class="badge badge-success" id="shift" style="display: none ">Shift</span>
+                        <kbd class="bg-primary" id="meta" style="display: none ">Meta</kbd>
+                        <kbd class="bg-primary" id="ctrl" style="display: none ">Ctrl</kbd>
+                        <kbd class="bg-primary" id="alt" style="display: none ">Alt</kbd>
+                        <kbd class="bg-primary" id="shift" style="display: none ">Shift</kbd>
                     </div>
                     <div class="col-sm-2 border-left border-dark">
-                        <span><strong> Special Keys: </strong></span>
+                        <span><strong> Key code: </strong></span>
                     </div>
-                    <div class="col-sm-4">
-                        Key: <span class="badge badge-danger" id="key" style="margin-right: 20px"></span>
-                        Code: <span class="badge badge-danger" id="code"></span>
+                    <div class="col-sm-2">
+                        <h5><span class="badge badge-dark " id="key" style="margin-right: 20px"></span></h5>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5><span class="badge badge-dark" id="code"></span></h5>
                     </div>
                 </div>
             </div>
@@ -73,6 +77,9 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <small class="font-weight-lighter text-light mr-3">Connect with me at: </small>
+                </li>
                 <li class="nav-item active">
                     <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
                 </li>
@@ -83,7 +90,7 @@
         </div>
 
         <form class="form-inline my-2 my-lg-0">
-            <small><a class="btn blue-gradient btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+            <small><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
                     Thanks
                     To</a>
                 <a class="btn btn-light btn-sm" href="home.html" role="button"><i class="fa fa-home"></i>
@@ -98,8 +105,8 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
 
     <script>
         // All functions

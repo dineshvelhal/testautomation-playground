@@ -9,11 +9,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
 </head>
 
 
@@ -104,7 +104,7 @@
                         <div class="col-md-4 mb-4">
                             <div class="form-group">
                                 <textarea class="form-control form-control-sm" id="notes" rows="6"
-                                    placeholder="id=notes"></textarea>
+                                    placeholder="Notes"></textarea>
                                 <small id="area_notes_validate" class="form-text text-success"></small>
                             </div>
                         </div>
@@ -116,10 +116,16 @@
                                 placeholder="Common Sense" readonly>
                         </div>
                         <div class="col-md-4 mb-4">
-
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="german">
+                                <label class="custom-control-label" for="german">Speaks German?</label>
+                            </div>
+                            <small id="german_validate" class="form-text text-success"></small>
                         </div>
                         <div class="col-md-4 mb-4">
-
+                            <label for="fluency">German Fluency Level</label>
+                            <input type="range" class="custom-range" min="0" max="5" id="fluency">
+                            <small id="fluency_validate" class="form-text text-success"></small>
                         </div>
                     </div>
                 </form>
@@ -193,7 +199,7 @@
 
         <br>
 
-        <div class="card text-center shadow border-success">
+        <!--<div class="card text-center shadow border-success">
             <div class="card-header text-success">
                 <h3>HTML5 Controls</h3>
             </div>
@@ -206,29 +212,17 @@
 
         <br>
 
-        <div class="card text-center shadow border-success">
-            <div class="card-header text-success">
-                <h3>Bootstrap Custom Controls</h3>
-            </div>
-            <div class="card-body">
-                <div class="form-group">
 
-                </div>
-            </div>
-        </div>
 
-        <br>
+        <br>-->
 
         <div class="card text-center shadow border-success">
             <div class="card-header text-success">
                 <h3>Non-English Labels and Locators</h3>
             </div>
-
-
-
             <div class="card-body">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-sm-6">
                         <div class="md-form">
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-sm" id="नाव"
@@ -239,7 +233,7 @@
 
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-6">
                         <form>
                             <div class="form-group">
                                 <div class="form-check form-check-inline" style="padding-right: 30px;">
@@ -274,6 +268,9 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <small class="font-weight-lighter text-light mr-3">Connect with me at: </small>
+                </li>
                 <li class="nav-item active">
                     <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
                 </li>
@@ -284,7 +281,7 @@
         </div>
 
         <form class="form-inline my-2 my-lg-0">
-            <small><a class="btn blue-gradient btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+            <small><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
                     Thanks
                     To</a>
                 <a class="btn btn-light btn-sm" href="home.html" role="button"><i class="fa fa-home"></i>
@@ -300,8 +297,8 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
 
     <script>
         $(document).ready(function () {
@@ -344,6 +341,16 @@
             // multi-select
             $("#select_lang").on("change keyup click", function () {
                 $("#select_lang_validate").text($(this).val());
+            });
+
+            // Switch
+            $("#german").on("change keyup click", function () {
+                $("#german_validate").text($(this).prop("checked"));
+            });
+
+            // Range slider
+            $("#fluency").on("change keyup click", function () {
+                $("#fluency_validate").text($(this).val());
             });
 
             // non-english textbox
