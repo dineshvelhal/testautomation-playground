@@ -128,6 +128,30 @@
                             <small id="fluency_validate" class="form-text text-success"></small>
                         </div>
                     </div>
+
+                    <div class="form-row align-items-center">
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <br>
+                                <label for="upload_cv">Upload CV (SINGLE FILE)</label>
+                                <input type="file" class="form-control-file bg-light" id="upload_cv"
+                                    aria-describedby="fileHelp">
+                                <small id="validate_cv" class="form-text text-success"></small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <br>
+                                <label for="upload_files">Upload Certificates (MULTIPLE FILES)</label>
+                                <input type="file" class="form-control-file bg-light" id="upload_files"
+                                    aria-describedby="fileHelp" multiple>
+                                <small id="validate_files" class="form-text text-success"></small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -367,6 +391,22 @@
                         + " "
                         + ($("#ਪੰਜਾਬੀ").prop("checked") ? $("#ਪੰਜਾਬੀ").val() : "")).trim()
                 );
+            });
+
+            // file upload
+            $("#upload_cv").on("change", function (e) {
+                $("#validate_cv").text(e.target.files[0].name);
+            });
+
+            // multi-file upload
+            $("#upload_files").on("change", function (e) {
+                var names = "", i = 0;
+
+                for (i = 0; i < e.target.files.length; i++) {
+                    names += (" " + e.target.files[i].name);
+                };
+
+                $("#validate_files").text(names);
             });
 
         });
