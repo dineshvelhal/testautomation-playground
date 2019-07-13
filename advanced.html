@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Advanced Topics</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
+    <!--<style>
+        label.star-rating::after {
+            content: "****";
+            display: inline-block;
+            padding: 0.25em 0.3em 0.25em 0.3em;
+            font-size: 100%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            color: white;
+            background-color: #28a745;
+        }
+    </style>-->
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">Advanced Topics</a>
+    </nav>
+
+    <br><br>
+
+    <div class="container align-items-center text-center">
+        <br>
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h2>CSS Pseudo Elements</h2>
+                <div class="col-sm-12 text-center">
+                    Using Selenium - read the * Rating of the book, enter it in the text box and click "Check Rating"
+                    button. You should see "Success" message.
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <table class="table table-bordered">
+                            <thead class="thead thead-light">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">
+                                        Book
+                                    </th>
+                                    <th scope="col">
+                                        * Rating
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <label class="font-weight-bold">Sapiens: A Brief History of the
+                                            Humankind</label>
+                                    </td>
+                                    <td>
+                                        <label class="star-rating"></label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class=" col-sm-6">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input class="form-control shadow-sm" type="text"
+                                            placeholder="Enter the * Rating of the book" id="txt_rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary shadow-sm" id="check_rating">Check
+                                        Rating</button>
+                                </div>
+                                <div class="col">
+                                    <h5><span class="badge badge-success" id="validate_rating"></span></h5>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+
+    <br><br><br><br>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><small class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </small></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <small class="font-weight-lighter text-light mr-3">Coordinates: </small>
+                </li>
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0">
+            <small><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="index.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></small>
+        </form>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
+
+    <script>
+        // All functions
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        $(document).ready(function () {
+            var rr = "*".repeat(getRandomInt(5) + 1);
+            $("head").append(
+                '<style>label.star-rating::after {content: "' + rr + '"; ' +
+                'display: inline-block; ' +
+                'padding: 0.25em 0.3em 0.25em 0.3em; ' +
+                'font-size: 100%; font-weight: 700; ' +
+                'line-height: 1; text-align: center; ' +
+                'white-space: nowrap; vertical-align: baseline; ' +
+                'color: white; background-color: #28a745;}</style>'
+            );
+
+            $("#check_rating").click(function () {
+                var content = window.getComputedStyle(
+                    document.querySelector('label.star-rating'), ':after'
+                ).getPropertyValue('content');
+
+                var rating = '"' + $("#txt_rating").val() + '"';
+
+                if (content == rating) {
+                    $("#validate_rating")
+                        .text("Success")
+                        .attr("class", "badge badge-success");
+                } else {
+                    $("#validate_rating")
+                        .text("Try Again!!")
+                        .attr("class", "badge badge-danger");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
