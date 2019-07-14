@@ -27,6 +27,7 @@
     <div class="container">
         <p></p><button type="button" class="btn btn-primary" id="inner_button">Inner Button</button>
     </div>
+
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
@@ -36,6 +37,16 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript 
     <script type="text/javascript" src="js/mdb.min.js"></script>-->
+
+    <script>
+        $(document).ready(function () {
+            $("#inner_button").click(function () {
+                $(this)
+                    .html("Clicked")
+                    .attr("class", "btn btn-secondary");
+            });
+        });
+    </script>
 </body>
 
 </html>

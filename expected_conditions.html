@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand/logo -->
-        <a class="navbar-brand abs" href="#">Wait Conditions Playground</a>
+        <a class="navbar-brand abs" href="index.html">The Playground</a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <form class="form-inline">
@@ -245,7 +245,7 @@
                     <div class="col-sm-5 align-items-center">
                         <p></p>
                         <div class="embed-responsive embed-responsive-21by9 shadow" style="display: none" id="frame">
-                            <iframe src="inner.html" name="frm"></iframe>
+                            <!--<iframe src="inner.html" name="frm" id="frm"></iframe>-->
                         </div>
                     </div>
                 </div>
@@ -431,14 +431,18 @@
                 finishWaitState($(this), origTarget);
             });
 
-            // wait for element visible
+            // wait for frame visible
             $("#wait_for_frame").click(async function () {
                 var ms = randomSeconds();
                 origTarget = setWaitState($(this), ms);
                 console.log("wait = " + ms);
                 await sleep(ms);
 
-                $("#frame").show();
+                $("#frame")
+                    .html('<iframe src="inner.html" name="frm" id="frm"></iframe>')
+                    .show();
+                //$('#frm').attr("src", $('#frm').attr("src"));
+                //document.getElementById("frm").contentDocument.location.reload(true);
 
                 finishWaitState($(this), origTarget);
             });
