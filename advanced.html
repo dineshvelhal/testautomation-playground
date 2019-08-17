@@ -93,6 +93,70 @@
         </div>
 
         <br>
+        <div class="card text-center shadow border-success">
+            <div class="card-header text-success">
+                <h2>Challenge 2</h2>
+                <div class="col-sm-12 text-center">
+                    Using Selenium (or any other tool) - read the * Rating of the book, enter it in the text box and
+                    click "Check Rating"
+                    button. You should see "Well done!" message.
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <table class="table table-bordered">
+                            <thead class="thead thead-light">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">
+                                        Book
+                                    </th>
+                                    <th scope="col">
+                                        * Rating
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <label class="font-weight-bold">Sapiens: A Brief History of the
+                                            Humankind</label>
+                                    </td>
+                                    <td>
+                                        <label class="star-rating"></label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class=" col-sm-6">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input class="form-control shadow-sm" type="text"
+                                            placeholder="Enter the * Rating of the book. E.g. ****" id="txt_rating">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary shadow-sm" id="check_rating">Check
+                                        Rating</button>
+                                </div>
+                                <div class="col">
+                                    <h5><span class="badge badge-success" id="validate_rating"></span></h5>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
     </div>
 
     <br><br><br><br>
