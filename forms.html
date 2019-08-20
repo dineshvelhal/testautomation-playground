@@ -33,7 +33,7 @@
 
     <div class="container">
         <div class="card text-center shadow border-success">
-            <div class="card-header text-success">
+            <div class="card-header">
                 <h3>Basic Form Controls</h3>
                 Interact with the form controls. The changed values will be shown below every element. This can be used
                 for validation in your autmated test.
@@ -45,7 +45,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-sm" id="exp"
                                     aria-describedby="expHelp" placeholder="years of automation experience">
-                                <small id="exp_help" class="form-text text-success"></small>
+                                <span id="exp_help" class="form-text text-success"></span>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
@@ -63,7 +63,7 @@
                                         value="JAVASCRIPT">
                                     <label class="form-check-label" for="check_javascript">JavaScript</label>
                                 </div>
-                                <small id="check_validate" class="form-text text-success"></small>
+                                <span id="check_validate" class="form-text text-success"></span>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
@@ -78,7 +78,7 @@
                                         name="tool">
                                     <label class="form-check-label" for="rad_protractor">Protractor</label>
                                 </div>
-                                <small id="rad_validate" class="form-text text-success"></small>
+                                <span id="rad_validate" class="form-text text-success"></span>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                     <option>Protractor</option>
                                     <option>Cypress</option>
                                 </select>
-                                <small id="select_tool_validate" class="form-text text-success"></small>
+                                <span id="select_tool_validate" class="form-text text-success"></span>
                             </div>
                         </div>
 
@@ -104,14 +104,14 @@
                                     <option>JavaScript</option>
                                     <option>TypeScript</option>
                                 </select>
-                                <small id="select_lang_validate" class="form-text text-success"></small>
+                                <span id="select_lang_validate" class="form-text text-success"></span>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="form-group">
                                 <textarea class="form-control form-control-sm" id="notes" rows="6"
                                     placeholder="Notes"></textarea>
-                                <small id="area_notes_validate" class="form-text text-success"></small>
+                                <span id="area_notes_validate" class="form-text text-success"></span>
                             </div>
                         </div>
                     </div>
@@ -126,12 +126,12 @@
                                 <input type="checkbox" class="custom-control-input" id="german">
                                 <label class="custom-control-label" for="german">Speaks German?</label>
                             </div>
-                            <small id="german_validate" class="form-text text-success"></small>
+                            <span id="german_validate" class="form-text text-success"></span>
                         </div>
                         <div class="col-md-4 mb-4">
                             <label for="fluency">German Fluency Level</label>
                             <input type="range" class="custom-range" min="0" max="5" id="fluency">
-                            <small id="fluency_validate" class="form-text text-success"></small>
+                            <span id="fluency_validate" class="form-text text-success"></span>
                         </div>
                     </div>
 
@@ -142,7 +142,7 @@
                                 <label for="upload_cv">Upload CV (SINGLE FILE)</label>
                                 <input type="file" class="form-control-file bg-light" id="upload_cv"
                                     aria-describedby="fileHelp">
-                                <small id="validate_cv" class="form-text text-success"></small>
+                                <span id="validate_cv" class="form-text text-success"></span>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
@@ -151,7 +151,7 @@
                                 <label for="upload_files">Upload Certificates (MULTIPLE FILES)</label>
                                 <input type="file" class="form-control-file bg-light" id="upload_files"
                                     aria-describedby="fileHelp" multiple>
-                                <small id="validate_files" class="form-text text-success"></small>
+                                <span id="validate_files" class="form-text text-success"></span>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
@@ -165,7 +165,7 @@
         <br>
 
         <div class="card text-center shadow border-success">
-            <div class="card-header text-success">
+            <div class="card-header">
                 <h3>Form with Validations</h3>
                 Every field, if empty, throws validation error when the form is submitted. The error text can be
                 validated
@@ -233,7 +233,7 @@
         <br>
 
         <!--<div class="card text-center shadow border-success">
-            <div class="card-header text-success">
+            <div class="card-header">
                 <h3>HTML5 Controls</h3>
             </div>
             <div class="card-body">
@@ -250,7 +250,7 @@
         <br>-->
 
         <div class="card text-center shadow border-success">
-            <div class="card-header text-success">
+            <div class="card-header">
                 <h3>Non-English Labels and Locators</h3>
                 These elements have non-English identifiers and visible text. You can test if your automation code
                 supports non-english characters in the locators and visible text.
@@ -263,7 +263,7 @@
                                 <input type="text" class="form-control form-control-sm" id="नाव"
                                     aria-describedby="expHelp">
                                 <label for="नाव" class="">आपले नांव लिहा</label>
-                                <small id="नाव_तपासा" class="form-text text-success"></small>
+                                <span id="नाव_तपासा" class="form-text text-success"></span>
                             </div>
 
                         </div>
@@ -283,7 +283,7 @@
                                     <input class="form-check-input" type="checkbox" id="ਪੰਜਾਬੀ" value="ਪੰਜਾਬੀ">
                                     <label class="form-check-label" for="ਪੰਜਾਬੀ">ਪੰਜਾਬੀ</label>
                                 </div>
-                                <small id="check_validate_non_english" class="form-text text-success"></small>
+                                <span id="check_validate_non_english" class="form-text text-success"></span>
                             </div>
 
                         </form>
@@ -298,13 +298,13 @@
     <br><br><br><br>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
-        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><small class="font-weight-lighter">&copy;
-                2019 Dinesh Velhal </small></a>
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><span class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </span></a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <small class="font-weight-lighter text-light mr-3">Coordinates: </small>
+                    <span class="font-weight-lighter text-light mr-3">Coordinates: </span>
                 </li>
                 <li class="nav-item active">
                     <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
@@ -316,11 +316,11 @@
         </div>
 
         <form class="form-inline my-2 my-lg-0">
-            <small><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+            <span><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
                     Thanks
                     To</a>
                 <a class="btn btn-light btn-sm" href="index.html" role="button"><i class="fa fa-home"></i>
-                    Home</a></small>
+                    Home</a></span>
         </form>
     </nav>
 
