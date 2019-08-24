@@ -1,4 +1,4 @@
-### [Playground URL](https://testautomation-playground.herokuapp.com) | [GitHub Pages](https://dineshvelhal.github.io/testautomation-playground/)
+### [Playground URL](https://testautomation-playground.herokuapp.com) | [GitHub Pages](https://dineshvelhal.github.io/testautomation-playground/) | [Docker](https://hub.docker.com/r/dineshvelhal/playground)
 
 # Introduction
 Test Automation code is a living entity. It undergoes changes all the time. You add new features to the automation framework. You fix the issues from time to time. Sometimes there is a need to increase test execution speed so you make some configuration changes. If nothing else changes, sometimes applications under test start behaving peculiarly (E.g. you need to change max. timeout values as the application is particularly slow in a specific test environment). The automation tools in use may behave in different ways after a version upgrade. So many things change.
@@ -55,7 +55,7 @@ Use it to evaluate third party automation tools and frameworks.
 - Test the interactions with Non-English web applications
 - Test challenging web scenarios
 
-### [Playground URL](https://testautomation-playground.herokuapp.com) | [GitHub Pages](https://dineshvelhal.github.io/testautomation-playground/)
+### [Playground URL](https://testautomation-playground.herokuapp.com) | [GitHub Pages](https://dineshvelhal.github.io/testautomation-playground/) | [Docker](https://hub.docker.com/r/dineshvelhal/playground)
 
 
 
