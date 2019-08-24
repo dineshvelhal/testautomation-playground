@@ -26,39 +26,56 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand/logo -->
         <a class="navbar-brand abs" href="index.html">The Playground</a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <form class="form-inline">
-                    <div class="input-group input-group-sm mr-1">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Min. Wait</span>
-                        </div>
-                        <input type="number" class="form-control" placeholder="Min. Wait" id="min_wait" value="2">
-                        <div class="input-group-append">
-                            <span class="input-group-text">sec.</span>
-                        </div>
-                    </div>
-                    <div class="input-group input-group-sm mr-1">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Max. Wait</span>
-                        </div>
-                        <input type="number" class="form-control" placeholder="Max. Wait" id="max_wait" value="5">
-                        <div class="input-group-append">
-                            <span class="input-group-text">sec.</span>
-                        </div>
-                    </div>
-                </form>
-            </li>
-        </ul>
     </nav>
 
     <br>
 
     <div class="container align-items-center text-center">
-        <h3>Set the <code>Min.</code> and <code>Max.</code> waits in the header above. It will be used as the waiting
-            range
-            by below sections.</h3>
+
+        <!-- 
+        ********************************************
+        Set Min and Max waits
+        ********************************************
+        -->
+        <div class="card text-center shadow border-success">
+            <div class="card-header justify-content-center">
+                <h4>Set the <code>Min.</code> and <code>Max.</code> waits. It will be used as the waiting
+                    range by the sections below.
+                </h4><br>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                            <form class="form-inline">
+                                    <div class="input-group mr-1">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Min. Wait</span>
+                                        </div>
+                                        <input type="number" class="form-control" placeholder="Min. Wait" id="min_wait" value="2">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">sec.</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group mr-1">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Max. Wait</span>
+                                        </div>
+                                        <input type="number" class="form-control" placeholder="Max. Wait" id="max_wait" value="5">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">sec.</span>
+                                        </div>
+                                    </div>
+                                </form>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                
+            </div>
+        </div>
+
         <br>
+
+        
+
         <!-- 
         ********************************************
         Wait for alert to be present
