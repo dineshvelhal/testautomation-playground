@@ -1,4 +1,5 @@
-[Playground URL](https://dineshvelhal.github.io/Playground/home.html)
+### [Playground URL](https://dineshvelhal.github.io/Playground/home.html) [GitHub Pages](https://dineshvelhal.github.io/testautomation-playground/)
+
 # About Playground
 
 Playground is a collection of web pages. Every web page has a set of UI elements that the automation framework can interact with. Thus you can use it for following purposes.
@@ -18,7 +19,7 @@ Test Automation code is a living entity. It undergoes changes all the time. You 
 
 All this is still fine, when you write test automation code either for your own use or for the use of small testing teams. You can quickly fix the issues and can bring automation on track again. The things aren't so easy and straightforward, when the End Userbase is large, varied and have varied expectations from your automation framework. It becomes imperative that you test your automation framework features thoroughly and ensure it works as expected when you release a new version.
 
-[Playground URL](http://testautomation-playground.herokuapp.com/)
+### [Playground URL](https://dineshvelhal.github.io/Playground/home.html) [GitHub Pages](https://dineshvelhal.github.io/testautomation-playground/)
 
 
 
