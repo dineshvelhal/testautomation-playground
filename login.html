@@ -99,7 +99,9 @@
                 var usr = $("#user").val();
                 var pwd = $("#password").val();
                 if (usr === "admin" && pwd === "admin") {
+                    event.preventDefault();
                     console.log("Successful Login");
+                    window.location.href = "confirmation.html";
                 } else {
                     if (usr !== "" && pwd !== "") {
                         $("#message").text("Incorrect username or password. Try again!!");
