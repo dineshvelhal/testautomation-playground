@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="Sample Web Application for Test Automation">
+    <meta name="author" content="Dinesh Velhal">
+
+    <title>Order Pizza</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand abs" href="index.html">The Playground</a>
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="card text-center shadow">
+            <div class="card-header">
+                <h3>Order your Pizza here</h3>
+                Customize your pizza by choosing from a variety of toppings, cheese and sauces.
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <form>
+                            <div class="form-row align-items-center">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold">Pizza Size</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_large" value="LARGE"
+                                                name="size">
+                                            <label class="form-check-label" for="rad_large">Large</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_medium" value="MEDIUM"
+                                                name="size">
+                                            <label class="form-check-label" for="rad_protractor">Medium</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_small" value="SMALL"
+                                                name="size">
+                                            <label class="form-check-label" for="rad_protractor">Small</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold" for="select_flavor">Pizza Flavor</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <select class="form-control form-control-sm" id="select_flavor">
+                                            <option value="cheese">Cheese</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="supreme">Supreme</option>
+                                            <option value="veggi_delight">Veggie Delight</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-4 border-success">
+                        <h3>Order Summary</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card text-center shadow border-success">
+            <div class="card-header">
+                <h3>Basic Form Controls</h3>
+                Interact with the form controls. The changed values will be shown below every element. This can be used
+                for validation in your autmated test.
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="exp"
+                                    aria-describedby="expHelp" placeholder="years of automation experience">
+                                <span id="exp_help" class="form-text text-success"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_java" value="JAVA">
+                                    <label class="form-check-label" for="check_java">Java</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_python" value="PYTHON">
+                                    <label class="form-check-label" for="check_python">Python</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_javascript"
+                                        value="JAVASCRIPT">
+                                    <label class="form-check-label" for="check_javascript">JavaScript</label>
+                                </div>
+                                <span id="check_validate" class="form-text text-success"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="rad_selenium" value="SELENIUM"
+                                        name="tool">
+                                    <label class="form-check-label" for="rad_selenium">Selenium</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="rad_protractor" value="PROTRACTOR"
+                                        name="tool">
+                                    <label class="form-check-label" for="rad_protractor">Protractor</label>
+                                </div>
+                                <span id="rad_validate" class="form-text text-success"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row align-items-center">
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <label for="select_tool">Primary Skill</label>
+                                <select class="form-control form-control-sm" id="select_tool">
+                                    <option value="sel">Selenium</option>
+                                    <option value="pro">Protractor</option>
+                                    <option value="cyp">Cypress</option>
+                                </select>
+                                <span id="select_tool_validate" class="form-text text-success"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <label for="select_lang">Choose Language</label>
+                                <select class="form-control form-control-sm" id="select_lang" size="4" multiple="">
+                                    <option value="java">Java</option>
+                                    <option value="python">Python</option>
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="typescript">TypeScript</option>
+                                </select>
+                                <span id="select_lang_validate" class="form-text text-success"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <textarea class="form-control form-control-sm" id="notes" rows="6"
+                                    placeholder="Notes"></textarea>
+                                <span id="area_notes_validate" class="form-text text-success"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row align-items-center">
+                        <div class="col-md-4 mb-4">
+                            <label for="common_sense">Mandatory Skill (Read-Only textbox)</label>
+                            <input class="form-control form-control-sm" type="text" id="common_sense"
+                                placeholder="Common Sense" readonly="">
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="german">
+                                <label class="custom-control-label" for="german">Speaks German?</label>
+                            </div>
+                            <span id="german_validate" class="form-text text-success"></span>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <label for="fluency">German Fluency Level</label>
+                            <input type="range" class="custom-range" min="0" max="5" id="fluency">
+                            <span id="fluency_validate" class="form-text text-success"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row align-items-center">
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <br>
+                                <label for="upload_cv">Upload CV (SINGLE FILE)</label>
+                                <input type="file" class="form-control-file bg-light" id="upload_cv"
+                                    aria-describedby="fileHelp">
+                                <span id="validate_cv" class="form-text text-success"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="form-group">
+                                <br>
+                                <label for="upload_files">Upload Certificates (MULTIPLE FILES)</label>
+                                <input type="file" class="form-control-file bg-light" id="upload_files"
+                                    aria-describedby="fileHelp" multiple="">
+                                <span id="validate_files" class="form-text text-success"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <label for="salary">Current Salary (Disabled TextBox)</label>
+                            <input class="form-control form-control-sm" type="text" id="salary"
+                                placeholder="You should not provide this" disabled="">
+                            <input class="form-control form-control-sm" type="text" id="invisible"
+                                placeholder="You cannot see this" hidden="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <br>
+
+
+    </div>
+
+
+
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><span class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </span></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <span class="font-weight-lighter text-light mr-3">Coordinates: </span>
+                </li>
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0">
+            <span><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="index.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></span>
+        </form>
+    </nav>
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
+
+    <script>
+        $(document).ready(function () {
+
+            // textbox
+            $("#exp").on("change keyup paste click", function () {
+                $("#exp_help").text($(this).val());
+            });
+
+            // checkbox
+            $("#check_java, #check_python, #check_javascript").on("change keyup click", function () {
+                $("#check_validate").text(
+                    (($("#check_java").prop("checked") ? $("#check_java").val() : "")
+                        + " "
+                        + ($("#check_python").prop("checked") ? $("#check_python").val() : "")
+                        + " "
+                        + ($("#check_javascript").prop("checked") ? $("#check_javascript").val() : "")).trim()
+                );
+            });
+
+            // radio button
+            $("#rad_selenium, #rad_protractor").on("change keyup click", function () {
+                $("#rad_validate").text(
+                    ($("#rad_selenium").prop("checked") ? $("#rad_selenium").val() : "")
+                    + ""
+                    + ($("#rad_protractor").prop("checked") ? $("#rad_protractor").val() : "")
+                );
+            });
+
+            // text area
+            $("#notes").on("change keyup paste click", function () {
+                $("#area_notes_validate").text($(this).val());
+            });
+
+            // dropdown 
+            $("#select_tool").on("change keyup click", function () {
+                $("#select_tool_validate").text($(this).children("option:selected").val());
+            });
+
+            // multi-select
+            $("#select_lang").on("change keyup click", function () {
+                $("#select_lang_validate").text($(this).val());
+            });
+
+            // Switch
+            $("#german").on("change keyup click", function () {
+                $("#german_validate").text($(this).prop("checked"));
+            });
+
+            // Range slider
+            $("#fluency").on("change keyup click", function () {
+                $("#fluency_validate").text($(this).val());
+            });
+
+            // non-english textbox
+            $("#नाव").on("change keyup paste click", function () {
+                $("#नाव_तपासा").text($(this).val());
+            });
+
+            // non-english checkbox
+            $("#मराठी, #ગુજરાતી, #ਪੰਜਾਬੀ").on("change keyup click", function () {
+                $("#check_validate_non_english").text(
+                    (($("#मराठी").prop("checked") ? $("#मराठी").val() : "")
+                        + " "
+                        + ($("#ગુજરાતી").prop("checked") ? $("#ગુજરાતી").val() : "")
+                        + " "
+                        + ($("#ਪੰਜਾਬੀ").prop("checked") ? $("#ਪੰਜਾਬੀ").val() : "")).trim()
+                );
+            });
+
+            // file upload
+            $("#upload_cv").on("change", function (e) {
+                $("#validate_cv").text(e.target.files[0].name);
+            });
+
+            // multi-file upload
+            $("#upload_files").on("change", function (e) {
+                var names = "", i = 0;
+
+                for (i = 0; i < e.target.files.length; i++) {
+                    names += (" " + e.target.files[i].name);
+                };
+
+                $("#validate_files").text(names);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
