@@ -32,16 +32,16 @@
     <br>
 
     <div class="container">
-        <div class="card text-center shadow">
+        <div class="card shadow">
             <div class="card-header">
-                <h3>Order your Pizza here</h3>
+                <h3>Dinesh's Pizza House</h3>
                 Customize your pizza by choosing from a variety of toppings, cheese and sauces.
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-8">
                         <form>
-                            <div class="form-row align-items-center">
+                            <div class="form-row align-items-top">
                                 <div class="col-md-4 mb-4">
                                     <label class="font-weight-bold">Pizza Size</label>
                                 </div>
@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row align-items-center">
+                            <div class="form-row align-items-top">
                                 <div class="col-md-4 mb-4">
                                     <label class="font-weight-bold" for="select_flavor">Pizza Flavor</label>
                                 </div>
@@ -80,151 +80,101 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold">Sauce</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_marinara"
+                                                value="MARINARA" name="sauce">
+                                            <label class="form-check-label" for="rad_marinara">Marinara</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_buffalo"
+                                                value="BUFFALO" name="sauce">
+                                            <label class="form-check-label" for="rad_buffalo">Buffalo</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_barbeque"
+                                                value="BARBEQUE" name="sauce">
+                                            <label class="form-check-label" for="rad_barbeque">Barbeque</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold">Toppings</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="onions">
+                                                <label class="custom-control-label" for="onions">Onions</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="green_olive">
+                                                <label class="custom-control-label" for="green_olive">Green
+                                                    Olive</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="black_olive">
+                                                <label class="custom-control-label" for="black_olive">Black
+                                                    Olive</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="tomoto">
+                                                <label class="custom-control-label" for="tomoto">Tomatoes</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold">Quantity</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" id="quantity"
+                                            aria-describedby="How many pizza you want?"
+                                            placeholder="How many pizza you want?">
+                                        <small id="quantity_help" class="form-text text-muted">Too much cheese is bad
+                                            for health</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold"></label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block"
+                                            name="submit_button" id="submit_button">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div class="col-sm-4 border-success">
-                        <h3>Order Summary</h3>
+                        <img src="pizza.jpg" class="img-fluid" alt="Pizza">
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <br>
 
-        <div class="card text-center shadow border-success">
-            <div class="card-header">
-                <h3>Basic Form Controls</h3>
-                Interact with the form controls. The changed values will be shown below every element. This can be used
-                for validation in your autmated test.
-            </div>
-            <div class="card-body">
-                <form>
-                    <div class="form-row align-items-center">
-                        <div class="col-md-4 mb-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" id="exp"
-                                    aria-describedby="expHelp" placeholder="years of automation experience">
-                                <span id="exp_help" class="form-text text-success"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="check_java" value="JAVA">
-                                    <label class="form-check-label" for="check_java">Java</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="check_python" value="PYTHON">
-                                    <label class="form-check-label" for="check_python">Python</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="check_javascript"
-                                        value="JAVASCRIPT">
-                                    <label class="form-check-label" for="check_javascript">JavaScript</label>
-                                </div>
-                                <span id="check_validate" class="form-text text-success"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="rad_selenium" value="SELENIUM"
-                                        name="tool">
-                                    <label class="form-check-label" for="rad_selenium">Selenium</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="rad_protractor" value="PROTRACTOR"
-                                        name="tool">
-                                    <label class="form-check-label" for="rad_protractor">Protractor</label>
-                                </div>
-                                <span id="rad_validate" class="form-text text-success"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row align-items-center">
-                        <div class="col-md-4 mb-4">
-                            <div class="form-group">
-                                <label for="select_tool">Primary Skill</label>
-                                <select class="form-control form-control-sm" id="select_tool">
-                                    <option value="sel">Selenium</option>
-                                    <option value="pro">Protractor</option>
-                                    <option value="cyp">Cypress</option>
-                                </select>
-                                <span id="select_tool_validate" class="form-text text-success"></span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 mb-4">
-                            <div class="form-group">
-                                <label for="select_lang">Choose Language</label>
-                                <select class="form-control form-control-sm" id="select_lang" size="4" multiple="">
-                                    <option value="java">Java</option>
-                                    <option value="python">Python</option>
-                                    <option value="javascript">JavaScript</option>
-                                    <option value="typescript">TypeScript</option>
-                                </select>
-                                <span id="select_lang_validate" class="form-text text-success"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="form-group">
-                                <textarea class="form-control form-control-sm" id="notes" rows="6"
-                                    placeholder="Notes"></textarea>
-                                <span id="area_notes_validate" class="form-text text-success"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row align-items-center">
-                        <div class="col-md-4 mb-4">
-                            <label for="common_sense">Mandatory Skill (Read-Only textbox)</label>
-                            <input class="form-control form-control-sm" type="text" id="common_sense"
-                                placeholder="Common Sense" readonly="">
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="german">
-                                <label class="custom-control-label" for="german">Speaks German?</label>
-                            </div>
-                            <span id="german_validate" class="form-text text-success"></span>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <label for="fluency">German Fluency Level</label>
-                            <input type="range" class="custom-range" min="0" max="5" id="fluency">
-                            <span id="fluency_validate" class="form-text text-success"></span>
-                        </div>
-                    </div>
-
-                    <div class="form-row align-items-center">
-                        <div class="col-md-4 mb-4">
-                            <div class="form-group">
-                                <br>
-                                <label for="upload_cv">Upload CV (SINGLE FILE)</label>
-                                <input type="file" class="form-control-file bg-light" id="upload_cv"
-                                    aria-describedby="fileHelp">
-                                <span id="validate_cv" class="form-text text-success"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="form-group">
-                                <br>
-                                <label for="upload_files">Upload Certificates (MULTIPLE FILES)</label>
-                                <input type="file" class="form-control-file bg-light" id="upload_files"
-                                    aria-describedby="fileHelp" multiple="">
-                                <span id="validate_files" class="form-text text-success"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <label for="salary">Current Salary (Disabled TextBox)</label>
-                            <input class="form-control form-control-sm" type="text" id="salary"
-                                placeholder="You should not provide this" disabled="">
-                            <input class="form-control form-control-sm" type="text" id="invisible"
-                                placeholder="You cannot see this" hidden="">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
 
 
 
@@ -235,6 +185,7 @@
 
 
 
+    <br><br><br><br>
     <br><br><br><br>
     <br><br><br><br>
     <br><br><br><br>
