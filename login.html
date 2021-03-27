@@ -65,7 +65,7 @@
 <body>
 
     <div class="login-form shadow  border-success">
-        <form action="confirmation.html" method="post">
+        <form action="order_submit.html" method="post">
             <h2 class="text-center">Log in</h2>
             <p class="hint-text">Already a user? Please login.</p>
             <div class="form-group">
@@ -101,7 +101,7 @@
                 if (usr === "admin" && pwd === "admin") {
                     event.preventDefault();
                     console.log("Successful Login");
-                    window.location.href = "confirmation.html";
+                    window.location.href = "order_submit.html";
                 } else {
                     if (usr !== "" && pwd !== "") {
                         $("#message").text("Incorrect username or password. Try again!!");
