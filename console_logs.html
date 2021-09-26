@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="Console Log Demo for Selenium 4 CDP">
+    <meta name="author" content="Dinesh Velhal">
+
+    <title>Console Log Demo for Selenium 4 CDP</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand abs" href="index.html">The Playground</a>
+    </nav>
+
+    <br><br>
+
+    <div class="container align-items-center text-center">
+        <br>
+        <div class="card text-center shadow border-success">
+            <div class="card-header">
+                <h2>Console Logs</h2>
+                <div class="col-sm-12 text-center">
+                    This page creates various types of console log messages at the time of page load. <br>
+                    This can be used to try the new CDP (Chrome DevTools Protocol) support in Selenium 4.
+                    Using CDP feature, now you can access the console logs using Selenium.
+                    <br><kbd class="bg-light text-body">This page generates the console logs as shown below:</kbd>,
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <img style="max-width: 100%; max-height: 100%;" src="console_logs.png" />
+                </div>
+            </div>
+            
+        </div>
+
+        <br>
+    </div>
+
+    <br><br><br><br>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><small class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </small></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <small class="font-weight-lighter text-light mr-3">Coordinates: </small>
+                </li>
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0">
+            <small><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="index.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></small>
+        </form>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
+
+    <script>
+        // All functions
+        $(document).ready(function () {
+            console.log("This is a console.log output");
+            console.debug("This is a console.debug output");
+            console.error("This is a console.error output");
+            console.info("This is console.info output");
+            console.warn("This is console.warn output");
+            console.trace();
+            console.table(["apples", "oranges", "bananas"]);
+        });
+    </script>
+</body>
+
+</html>

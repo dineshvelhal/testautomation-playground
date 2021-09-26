@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="Sample Web Application for Test Automation">
+    <meta name="author" content="Dinesh Velhal">
+
+    <title>Order Pizza</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand abs" href="index.html">The Playground</a>
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h3>Dinesh's Pizza House</h3>
+                Customize your pizza by choosing from a variety of toppings, cheese and sauces.
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <form id="pizza_order_form">
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold">Pizza Size</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_large" value="LARGE"
+                                                name="size" checked>
+                                            <label class="form-check-label" for="rad_large">Large</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_medium" value="MEDIUM"
+                                                name="size">
+                                            <label class="form-check-label" for="rad_protractor">Medium</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_small" value="SMALL"
+                                                name="size">
+                                            <label class="form-check-label" for="rad_protractor">Small</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold" for="select_flavor">Pizza Flavor</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <select class="form-control form-control-sm" id="select_flavor">
+                                            <option value="Cheese">Cheese</option>
+                                            <option value="Pepperoni">Pepperoni</option>
+                                            <option value="Supreme">Supreme</option>
+                                            <option value="Veggie Delight">Veggie Delight</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold">Sauce</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_marinara"
+                                                value="MARINARA" name="sauce" checked>
+                                            <label class="form-check-label" for="rad_marinara">Marinara</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_buffalo"
+                                                value="BUFFALO" name="sauce">
+                                            <label class="form-check-label" for="rad_buffalo">Buffalo</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="rad_barbeque"
+                                                value="BARBEQUE" name="sauce">
+                                            <label class="form-check-label" for="rad_barbeque">Barbeque</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold">Toppings</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-4">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="onions"
+                                                    value="ONIONS">
+                                                <label class="form-check-label" for="onions">Onions</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="green_olive"
+                                                    value="green_olive">
+                                                <label class="form-check-label" for="green_olive">Green Olive</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="tomoto"
+                                                    value="tomato" checked>
+                                                <label class="form-check-label" for="tomoto">Tomatoes</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-top">
+                                <div class="col-md-4 mb-4">
+                                    <label class="font-weight-bold">Quantity</label>
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" id="quantity"
+                                            aria-describedby="How many pizza you want?"
+                                            placeholder="How many pizza you want?" required />
+                                        <small id="quantity_help" class="form-text text-muted">Too much cheese is bad
+                                            for health</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center">
+                                <div class="col-md-4 mb-4">
+
+                                </div>
+                                <div class="col-md-8 mb-8">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-info btn-lg btn-block" name="submit_button"
+                                            id="submit_button">Add to Cart</button>
+                                        <h2 class="lead font-weight-bold text-success" id="added_message"
+                                            style="display: none;">
+                                            Pizza added to the cart!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-4 border-success">
+                        <img src="pizza.jpg" class="img-fluid" alt="Pizza">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <br>
+
+
+    </div>
+
+
+    <div class="modal fade" id="quantity_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <i class="fa fa-lg fa-info-circle text-warning" aria-hidden="true"></i> Quantity must be 1 or more!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="success_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <div class="row">
+                            <div class="col col-sm-2">
+                                <div class="spinner-border text-primary" role="status" id="wait_pizza_add">
+                                    <span class="sr-only">Adding to cart...</span>
+                                </div>
+                            </div>
+                            <div class="col col-sm-10">Adding to the cart...</div>
+                        </div>
+
+
+                    </h5>
+
+                </div>
+                <!-- <div class="modal-body">
+
+                </div> -->
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><span class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </span></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <span class="font-weight-lighter text-light mr-3">Coordinates: </span>
+                </li>
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0">
+            <span><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="index.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></span>
+        </form>
+    </nav>
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
+
+    <script>
+        $(document).ready(function () {
+            $("#submit_button").click(function (event) {
+
+                event.preventDefault();
+
+                if (parseInt($('#quantity').val()) > 0) {
+
+                    $('#success_modal').modal('show');
+
+                    setTimeout(function () {
+                        $('#success_modal').modal('hide');
+
+                        $('#added_message').show();
+
+                        setTimeout(function () {
+                            $('#added_message').hide(300);
+
+                            $('#pizza_order_form').trigger('reset');
+                        }, 5000);
+
+                    }, 5000);
+
+
+
+                    console.log("Pizza added to cart");
+                } else {
+                    $('#quantity_modal').modal('show');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

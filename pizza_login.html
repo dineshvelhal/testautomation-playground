@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Sample Web Application for Test Automation">
+    <meta name="author" content="Dinesh Velhal">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style type="text/css">
+        .login-form {
+            width: 380px;
+            margin: 50px auto;
+        }
+
+        .login-form form {
+            margin-bottom: 15px;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #858a92;
+            margin: 0 0 15px;
+            position: relative;
+            text-align: center;
+        }
+
+        .login-form h2:before,
+        .login-form h2:after {
+            content: "";
+            height: 5px;
+            width: 30%;
+            background: #bbc4f0;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+        }
+
+        .login-form h2:before {
+            left: 0;
+        }
+
+        .login-form h2:after {
+            right: 0;
+        }
+
+        .login-form .hint-text {
+            color: #999;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="login-form shadow  border-success">
+        <form action="order_submit.html" method="post">
+            <h2 class="text-center">Log in</h2>
+            <p class="hint-text">Already a user? Please login.</p>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email" required="required" ID="user">
+                <small class="text-primary">Use Email</small>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required="required" id="password">
+                <small class="text-primary">Hint: admin</small>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block" id="login">Log in</button>
+            </div>
+            <div class="clearfix">
+                <label class="pull-left checkbox-inline text-secondary"><input type="checkbox"> Remember
+                    me</label>
+                <a href="register.html" style="float: right!important;">New user? Register!</a>
+            </div>
+            <div class="text-danger text-center"><span id="message"></span></div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#login").click(function (event) {
+                var usr = $("#user").val();
+                var pwd = $("#password").val();
+                // if (usr === "admin" && pwd === "admin") {
+                //     event.preventDefault();
+                //     console.log("Successful Login");
+
+                //     document.cookie = "user=" + usr + ";";
+
+                //     window.location.href = "pizza_order_submit.html";
+                // } else {
+                //     if (usr !== "" && pwd !== "") {
+                //         $("#message").text("Incorrect username or password. Try again!!");
+                //         event.preventDefault();
+                //     }
+                // }
+
+                $.post("http://localhost:3000/login",
+                    {email: usr, password: pwd},
+                    function(data, status) {
+                        console.log("user: " + usr);
+                        console.log("Data: " + data);
+                        console.log("status code: " + status);
+                    }
+                );
+
+                // var xhr = new XMLHttpRequest();
+                // xhr.open("POST", "http://localhost:3000/login", true);
+                // xhr.setRequestHeader('Content-Type', 'application/json');
+                // xhr.send(JSON.stringify({
+                //     email: usr, password: pwd
+                // }));
+            });
+        });
+    </script>
+</body>
+
+
+
+</html>
