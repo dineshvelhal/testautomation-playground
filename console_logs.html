@@ -39,7 +39,8 @@
                     This page creates various types of console log messages at the time of page load. <br>
                     This can be used to try the new CDP (Chrome DevTools Protocol) support in Selenium 4.
                     Using CDP feature, now you can access the console logs using Selenium.
-                    <br><kbd class="bg-light text-body">This page generates the console logs as shown below:</kbd>,
+                    <br><kbd class="bg-light text-body">This page generates the console logs as shown below:</kbd>
+                    <br><button type="button" class="btn btn-primary" id="button">Write to console</button>
                 </div>
             </div>
             <div class="card-body">
@@ -95,13 +96,17 @@
     <script>
         // All functions
         $(document).ready(function () {
-            console.log("This is a console.log output");
-            // console.debug("This is a console.debug output");
-            // console.error("This is a console.error output");
-            // console.info("This is console.info output");
-            // console.warn("This is console.warn output");
-            // console.trace();
-            // console.table(["apples", "oranges", "bananas"]);
+            $("#button").click(function () {
+                console.log("This is a console.log output");
+                console.debug("This is a console.debug output");
+                console.error("This is a console.error output");
+                console.info("This is console.info output");
+                console.warn("This is console.warn output");
+                console.trace();
+                console.table(["apples", "oranges", "bananas"]);
+            });
+
+            
         });
     </script>
 </body>
