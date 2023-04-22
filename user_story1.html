@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+   <meta name="description" content="Sample Web Application for Test Automation">
+   <meta name="author" content="Dinesh Velhal">
+
+   <title>Order Pizza</title>
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="css/all.css">
+   <!-- Bootstrap core CSS -->
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+   <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
+</head>
+
+
+
+<body>
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Brand/logo -->
+      <a class="navbar-brand abs" href="index.html">User Stories</a>
+   </nav>
+
+   <br>
+   <br>
+
+   <div class="container">
+      <div class="card shadow">
+         <div class="card-header bg-info text-white">
+            <h3>US-12345: Search UFO sightings locations Form</h3>
+            Description: Add a new form for searching the locations of the UFO sighting based on various search criteria
+         </div>
+         <div class="card-body">
+            <div class="row">
+               <div class="col-sm-4">
+                  Summary: Create a new form to search the locations of UFO sightings across the globe using the search
+                  criteria
+                  shown in the wireframe.
+               </div>
+               <div class="col-sm-8 border-success">
+                  <img src="wireframe.png" class="img-fluid" alt="wireframe">
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <br>
+   </div>
+
+
+   <div class="modal fade" id="quantity_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+
+            <div class="modal-body">
+               <i class="fa fa-lg fa-info-circle text-warning" aria-hidden="true"></i> Quantity must be 1 or more!
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade" id="success_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLongTitle">
+                  <div class="row">
+                     <div class="col col-sm-2">
+                        <div class="spinner-border text-primary" role="status" id="wait_pizza_add">
+                           <span class="sr-only">Adding to cart...</span>
+                        </div>
+                     </div>
+                     <div class="col col-sm-10">Adding to the cart...</div>
+                  </div>
+
+
+               </h5>
+
+            </div>
+            <!-- <div class="modal-body">
+
+                </div> -->
+            <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                </div> -->
+         </div>
+      </div>
+   </div>
+
+
+   <br><br><br><br>
+   <br><br><br><br>
+   <br><br><br><br>
+   <br><br><br><br>
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+      <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><span class="font-weight-lighter">&copy;
+            2019 Dinesh Velhal </span></a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+               <span class="font-weight-lighter text-light mr-3">Coordinates: </span>
+            </li>
+            <li class="nav-item active">
+               <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+            </li>
+            <li class="nav-item">
+               <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+            </li>
+         </ul>
+      </div>
+
+      <form class="form-inline my-2 my-lg-0">
+         <span><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+               Thanks
+               To</a>
+            <a class="btn btn-light btn-sm" href="index.html" role="button"><i class="fa fa-home"></i>
+               Home</a></span>
+      </form>
+   </nav>
+
+
+   <!-- SCRIPTS -->
+   <!-- JQuery -->
+   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+   <!-- Bootstrap tooltips -->
+   <script type="text/javascript" src="js/popper.min.js"></script>
+   <!-- Bootstrap core JavaScript -->
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
+
+   <script>
+      $(document).ready(function () {
+         $("#submit_button").click(function (event) {
+
+            event.preventDefault();
+
+            if (parseInt($('#quantity').val()) > 0) {
+
+               $('#success_modal').modal('show');
+
+               setTimeout(function () {
+                  $('#success_modal').modal('hide');
+
+                  $('#added_message').show();
+
+                  setTimeout(function () {
+                     $('#added_message').hide(300);
+
+                     $('#pizza_order_form').trigger('reset');
+                  }, 5000);
+
+               }, 5000);
+
+
+
+               console.log("Pizza added to cart");
+            } else {
+               $('#quantity_modal').modal('show');
+            }
+         });
+      });
+   </script>
+</body>
+
+</html>
